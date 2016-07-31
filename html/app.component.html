@@ -5,7 +5,9 @@
         <div class="col-md-3">
             <ul class="plants list-group">
                 <li *ngFor="let plant of plants"
-                    class="list-group-item">
+                    class="list-group-item"
+                    [class.active]="plant === selectedPlant"
+                    (click)="onSelect(plant)">
                     <span>{{plant.id}}</span>
                     <span>{{plant.name}}</span>
                 </li>

@@ -20,6 +20,9 @@ var AppComponent = (function () {
         this.title = 'Plant Catalog';
         this.plants = PLANTS; // exposes the plants for binding
     }
+    AppComponent.prototype.onSelect = function (plant) {
+        this.selectedPlant = plant;
+    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',

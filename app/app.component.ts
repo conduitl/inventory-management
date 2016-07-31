@@ -12,6 +12,10 @@ export class Plant {
 export class AppComponent {
     title = 'Plant Catalog';
     public plants = PLANTS; // exposes the plants for binding
+    selectedPlant: Plant; // Track which plant is selected
+    onSelect(plant: Plant) {
+        this.selectedPlant = plant;
+    }
  }
 
  const PLANTS: Plant[] = [
