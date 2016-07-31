@@ -1,0 +1,22 @@
+<div *ngIf="category">
+    <h2>List of {{category.name}}</h2>
+    <div *ngFor="let plant of plants">
+        <div *ngIf="category.name === plant.type">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{plant.name}}</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-9">
+                            {{plant.description}}
+                        </div>
+                        <div class="col-md-3 hidden-sm hidden-xs" *ngIf="plant.image">
+                            <img class="pull-right" src="{{plant.image}}"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
