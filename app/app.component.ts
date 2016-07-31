@@ -7,15 +7,7 @@ export class Plant {
 
 @Component({
   selector: 'my-app',
-  template: `
-    <h1>{{title}}</h1>
-    <h2>Plants</h2>
-    <ul class="plants">
-        <li *ngFor="let plant of plants">
-          {{plant.id}} | {{plant.name}}
-        </li>
-    </ul>
-    `
+  templateUrl: 'html/app.component.html'
 })
 export class AppComponent {
     title = 'Plant Catalog';
