@@ -15,13 +15,20 @@ var Plant = (function () {
     return Plant;
 }());
 exports.Plant = Plant;
+var Category = (function () {
+    function Category() {
+    }
+    return Category;
+}());
+exports.Category = Category;
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'Plant Catalog';
         this.plants = PLANTS; // exposes the plants for binding
+        this.categories = categories; // exposes categories for binding
     }
-    AppComponent.prototype.onSelect = function (plant) {
-        this.selectedPlant = plant;
+    AppComponent.prototype.onSelect = function (category) {
+        this.selectedCategory = category;
     };
     AppComponent = __decorate([
         core_1.Component({
@@ -33,6 +40,11 @@ var AppComponent = (function () {
     return AppComponent;
 }());
 exports.AppComponent = AppComponent;
+var categories = [
+    { id: 1, name: 'flowers', plants: null },
+    { id: 2, name: 'shrubs', plants: null },
+    { id: 3, name: 'trees', plants: null }
+];
 var PLANTS = [
     { id: 1, name: 'cyclamen' },
     { id: 2, name: 'alyssum' },
