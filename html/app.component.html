@@ -1,7 +1,15 @@
-<h1>{{title}}</h1>
-<h2>Plants</h2>
-<ul class="plants">
-    <li *ngFor="let plant of plants">
-        {{plant.id}} | {{plant.name}}
-    </li>
-</ul>
+<div class="container">
+    <h1>{{title}}</h1>
+    <h2>Plants</h2>
+    <section class="row">
+        <div class="col-md-3">
+            <ul class="plants list-group">
+                <li *ngFor="let plant of plants"
+                    class="list-group-item">
+                    <span>{{plant.id}}</span>
+                    <span>{{plant.name}}</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+</div>
