@@ -18,19 +18,28 @@ exports.Plant = Plant;
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'Plant Catalog';
-        this.plant = {
-            id: 1,
-            name: 'cyclamen'
-        };
+        this.plants = PLANTS; // exposes the plants for binding
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n    <h1>{{title}}</h1>\n    <h2>{{plant.name}} details</h2>\n    <div>id: {{plant.id}}</div>\n    <div>name: {{plant.name}}</div>\n    "
+            template: "\n    <h1>{{title}}</h1>\n    <h2>Plants</h2>\n    <ul class=\"plants\">\n        <li *ngFor=\"let plant of plants\">\n          {{plant.id}} | {{plant.name}}\n        </li>\n    </ul>\n    "
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
     return AppComponent;
 }());
 exports.AppComponent = AppComponent;
+var PLANTS = [
+    { id: 1, name: 'cyclamen' },
+    { id: 2, name: 'alyssum' },
+    { id: 3, name: 'dianthus' },
+    { id: 4, name: 'sweet william' },
+    { id: 5, name: 'juncus' },
+    { id: 6, name: 'kale' },
+    { id: 7, name: 'maidenhair' },
+    { id: 8, name: 'dracaena' },
+    { id: 9, name: 'creeping jenny' },
+    { id: 10, name: 'English ivy' }
+];
 //# sourceMappingURL=app.component.js.map
