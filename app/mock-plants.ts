@@ -2,9 +2,9 @@
  
  export const PLANTS: Plant[] = [
      { id: 1, name: 'cyclamen', type: 'flowers', image: 'img/cyclamen.jpg', 
-     description: 'Cyclamen is a genus of 23 species of perennial flowering plants in the family Primulaceae. Cyclamen species are native to Europe and the Mediterranean Basin east to Iran, with one species in Somalia. They grow from tubers and are valued for their flowers with upswept petals and variably patterned leaves. (Wikipedia)' },
+        description: 'Cyclamen is a genus of 23 species of perennial flowering plants in the family Primulaceae. Cyclamen species are native to Europe and the Mediterranean Basin east to Iran, with one species in Somalia. They grow from tubers and are valued for their flowers with upswept petals and variably patterned leaves. (Wikipedia)' },
      { id: 2, name: 'alyssum', type: 'flowers', image: 'img/alyssum.jpg', 
-     description: 'Alyssum is a genus of about 100–170 species of flowering plants in the family Brassicaceae, native to Europe, Asia, and northern Africa, with the highest species diversity in the Mediterranean region. The genus comprises annual and perennial herbaceous plants or (rarely) small shrubs, growing to 10–100 cm tall, with oblong-oval leaves and yellow or white flowers (pink to purple in a few species). (Wikipedia)'  },
+        description: 'Alyssum is a genus of about 100–170 species of flowering plants in the family Brassicaceae, native to Europe, Asia, and northern Africa, with the highest species diversity in the Mediterranean region. The genus comprises annual and perennial herbaceous plants or (rarely) small shrubs, growing to 10–100 cm tall, with oblong-oval leaves and yellow or white flowers (pink to purple in a few species). (Wikipedia)'  },
      { id: 3, name: 'dianthus', type: 'flowers', image: 'img/dianthus.jpg', description: '' },
      { id: 4 ,name: 'sweet william', type: 'flowers', image: null, description: '' },
      { id: 5, name: 'juncus', type: 'flowers', image: null, description: '' },
@@ -19,9 +19,12 @@
      { id: 14, name: 'tru-green elm', type: 'trees', image: null, description: '' },
      { id: 15, name: 'camphor', type: 'trees', image: null, description: '' },
      { id: 16, name: 'shumard red oak', type: 'trees', image: null, description: '' },
-     { id: 17, name: 'azaleas', type: 'shrubs', image: null, description: '' },
-     { id: 18, name: 'redbud', type: 'shrubs', image: null, description: '' },
-     { id: 19, name: 'foxtail', type: 'shrubs', image: null, description: ''},
+     { id: 17, name: 'azaleas', type: 'shrubs', image: 'img/azaleas.jpg', 
+        description: 'Azaleas are flowering shrubs in the genus Rhododendron, particularly the former sections Tsutsuji (evergreen) and Pentanthera (deciduous). Azaleas bloom in spring, their flowers often lasting several weeks. Shade tolerant, they prefer living near or under trees. They are part of the family Ericaceae.' },
+     { id: 18, name: 'redbud', type: 'shrubs', image: 'img/redbud.jpg', 
+        description: 'Cercis is a genus of about 10 species in the subfamily Caesalpinioideae of the pea family Fabaceae,[2] native to warm temperate regions. It contains small deciduous trees or large shrubs commonly known as redbuds.[5] They are characterised by simple, rounded to heart-shaped leaves and pinkish-red flowers borne in the early spring on bare leafless shoots, on both branches and trunk ("cauliflory").' },
+     { id: 19, name: 'foxtail', type: 'shrubs', image: 'img/foxtail.jpg', 
+        description: 'Asparagus aethiopicus, Sprenger\'s Asparagus, is a plant native to the Cape Provinces and the Northern Provinces of South Africa. Often used as an ornamental plant, it is considered an invasive weed in many locations. Asparagus fern and foxtail fern are common names; however, it is unrelated to true ferns.'},
      { id: 20, name: 'monrovia', type: 'shrubs', image: null, description: ''},
      { id: 21, name: 'jatropha', type: 'shrubs', image: null, description: ''},
      { id: 22, name: 'thryallis', type: 'shrubs', image: null, description: ''}
