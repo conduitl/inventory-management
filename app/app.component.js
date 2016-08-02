@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var list_component_1 = require('./list.component');
+var inventory_list_component_1 = require('./inventory-list.component');
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'Plant Catalog';
@@ -22,7 +22,7 @@ var AppComponent = (function () {
         core_1.Component({
             selector: 'my-app',
             templateUrl: 'html/app.component.html',
-            directives: [list_component_1.InventoryListComponent]
+            directives: [inventory_list_component_1.InventoryListComponent]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

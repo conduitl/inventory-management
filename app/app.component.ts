@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { InventoryListComponent } from './list.component';
+import { InventoryListComponent } from './inventory-list.component';
 
 import { Plant } from './plant';
 import { Category } from './category';

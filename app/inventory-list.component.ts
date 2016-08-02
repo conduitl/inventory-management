@@ -7,7 +7,7 @@ import { PlantService } from './plant.service'
 
 @Component({
     selector: 'inventory-list',
-    templateUrl: 'html/list.component.html',
+    templateUrl: 'html/inventory-list.component.html',
     providers: [PlantService]
 })
 
