@@ -2,13 +2,13 @@ import { Component, Input, OnInit } from '@angular/core';
 
 import { Plant } from './plant';
 import { Category } from './category';
+import { PlantService } from './plant.service';
 
-import { PlantService } from './plant.service'
+
 
 @Component({
     selector: 'inventory-list',
-    templateUrl: 'html/inventory-list.component.html',
-    providers: [PlantService]
+    templateUrl: 'html/inventory-list.component.html'
 })
 
 export class InventoryListComponent implements OnInit {
