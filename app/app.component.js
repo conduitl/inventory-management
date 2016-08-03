@@ -9,29 +9,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var inventory_list_component_1 = require('./inventory-list.component');
+var category_view_component_1 = require('./category-view.component');
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'Plant Catalog';
-        this.categories = categories; // exposes categories for binding
     }
-    AppComponent.prototype.onSelect = function (category) {
-        this.selectedCategory = category;
-    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
             templateUrl: 'html/app.component.html',
-            directives: [inventory_list_component_1.InventoryListComponent]
+            directives: [category_view_component_1.CategoryView]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
     return AppComponent;
 }());
 exports.AppComponent = AppComponent;
-var categories = [
-    { id: 1, name: 'flowers' },
-    { id: 2, name: 'shrubs' },
-    { id: 3, name: 'trees' }
-];
 //# sourceMappingURL=app.component.js.map
