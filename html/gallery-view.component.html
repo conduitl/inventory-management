@@ -1,9 +1,8 @@
 <h3>Most Popular</h3>
 <div>
-    <div *ngFor="let plant of plants">
-        <div>
-            <h4>{{plant.name}}</h4>
+    <span *ngFor="let plant of plants">
+        <div *ngIf="plant.image" class="gallery-tile">
             <img src="{{plant.image}}"/>
         </div>
-    </div>
+    </span>
 </div>
