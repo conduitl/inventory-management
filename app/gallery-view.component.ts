@@ -1,7 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+import { Plant } from './plant';
+import { PlantService } from './plant.service';
 
 @Component({
     selector: 'gallery-view',
-    template: '<h3>Gallery</h3>'
+    templateUrl: 'html/gallery-view.component.html'
 })
-export class GalleryViewComponent { }
+export class GalleryViewComponent implements OnInit { 
+    plants: Plant[] = [];
+
+    constructor(private plantService: PlantService){}
+
+    ngOnInit() {
+        this.plantService.getPlants()
+            .then(plants => this.plants = plants);
+    }
+}

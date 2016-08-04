@@ -9,15 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var plant_service_1 = require('./plant.service');
 var GalleryViewComponent = (function () {
-    function GalleryViewComponent() {
+    function GalleryViewComponent(plantService) {
+        this.plantService = plantService;
+        this.plants = [];
     }
+    GalleryViewComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.plantService.getPlants()
+            .then(function (plants) { return _this.plants = plants; });
+    };
     GalleryViewComponent = __decorate([
         core_1.Component({
             selector: 'gallery-view',
-            template: '<h3>Gallery</h3>'
+            templateUrl: 'html/gallery-view.component.html'
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [plant_service_1.PlantService])
     ], GalleryViewComponent);
     return GalleryViewComponent;
 }());
