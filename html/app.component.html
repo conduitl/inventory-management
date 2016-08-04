@@ -1,5 +1,8 @@
 <div class="container">
     <h1>{{title}}</h1>
-    <a [routerLink]="['/categories']">Categories</a>
+    <nav>
+        <a [routerLink]="['/gallery']" routerLinkActive="active">Gallery</a>
+        <a [routerLink]="['/categories']">Categories</a>
+    </nav>
     <router-outlet></router-outlet>
 </div>
