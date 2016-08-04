@@ -26,7 +26,7 @@ import { Category } from './category';
     </section>`,
     directives: [InventoryListComponent]
 })
-export class CategoryView {
+export class CategoryViewComponent {
     public categories = categories; // exposes categories for binding
     selectedCategory: Category; // Track which category is selected
     onSelect(category: Category) {

@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
+import { ROUTER_DIRECTIVES } from '@angular/router';
 
 
-import { CategoryView } from './category-view.component';
 import { PlantService } from './plant.service';
 
 
 @Component({
   selector: 'my-app',
   templateUrl: 'html/app.component.html',
-  directives: [CategoryView],
+  directives: [ROUTER_DIRECTIVES],
   providers: [PlantService]
 })
 export class AppComponent {

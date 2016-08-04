@@ -29,8 +29,7 @@ var InventoryListComponent = (function () {
     InventoryListComponent = __decorate([
         core_1.Component({
             selector: 'inventory-list',
-            templateUrl: 'html/inventory-list.component.html',
-            providers: [plant_service_1.PlantService]
+            templateUrl: 'html/inventory-list.component.html'
         }), 
         __metadata('design:paramtypes', [plant_service_1.PlantService])
     ], InventoryListComponent);

@@ -10,24 +10,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var inventory_list_component_1 = require('./inventory-list.component');
-var CategoryView = (function () {
-    function CategoryView() {
+var CategoryViewComponent = (function () {
+    function CategoryViewComponent() {
         this.categories = categories; // exposes categories for binding
     }
-    CategoryView.prototype.onSelect = function (category) {
+    CategoryViewComponent.prototype.onSelect = function (category) {
         this.selectedCategory = category;
     };
-    CategoryView = __decorate([
+    CategoryViewComponent = __decorate([
         core_1.Component({
             selector: 'category-view',
             template: "    \n    <section class=\"row\">\n        <div class=\"col-md-3\">\n            <h2>Categories</h2>\n            <ul class=\"categories list-group\">\n                <li *ngFor=\"let category of categories\"\n                    class=\"list-group-item\"\n                    [class.active]=\"category === selectedCategory\"\n                    (click)=\"onSelect(category)\">\n                    <span>{{category.id}}</span>\n                    <span>{{category.name}}</span>\n                </li>\n            </ul>\n        </div>\n        <div class=\"col-md-9\">\n            <!--Add List Component-->\n            <inventory-list [category]=\"selectedCategory\"></inventory-list>\n        </div>\n    </section>",
             directives: [inventory_list_component_1.InventoryListComponent]
         }), 
         __metadata('design:paramtypes', [])
-    ], CategoryView);
-    return CategoryView;
+    ], CategoryViewComponent);
+    return CategoryViewComponent;
 }());
-exports.CategoryView = CategoryView;
+exports.CategoryViewComponent = CategoryViewComponent;
 var categories = [
     { id: 1, name: 'flowers' },
     { id: 2, name: 'shrubs' },
