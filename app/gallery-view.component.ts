@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { Plant } from './plant';
 import { PlantService } from './plant.service';
@@ -10,10 +11,17 @@ import { PlantService } from './plant.service';
 export class GalleryViewComponent implements OnInit { 
     plants: Plant[] = [];
 
-    constructor(private plantService: PlantService){}
+    constructor(
+        private router: Router,
+        private plantService: PlantService){}
 
     ngOnInit() {
         this.plantService.getPlants()
             .then(plants => this.plants = plants);
+    }
+
+    gotoDetail(plant: Plant) {
+        let link = ['/detail', plant.id];
+        this.router.navigate(link);
     }
 }
