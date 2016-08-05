@@ -2,6 +2,7 @@
 var router_1 = require('@angular/router');
 var category_view_component_1 = require('./category-view.component');
 var gallery_view_component_1 = require('./gallery-view.component');
+var plant_detail_component_1 = require('./plant-detail.component');
 var routes = [
     {
         path: 'categories',
@@ -15,6 +16,10 @@ var routes = [
         path: '',
         redirectTo: '/gallery',
         pathMatch: 'full'
+    },
+    {
+        path: 'detail/:id',
+        component: plant_detail_component_1.PlantDetailComponent
     }
 ];
 exports.appRouterProviders = [

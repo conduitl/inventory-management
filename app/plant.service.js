@@ -16,6 +16,10 @@ var PlantService = (function () {
     PlantService.prototype.getPlants = function () {
         return Promise.resolve(mock_plants_1.PLANTS);
     };
+    PlantService.prototype.getPlant = function (id) {
+        return this.getPlants()
+            .then(function (plants) { return plants.find(function (plant) { return plant.id === id; }); });
+    };
     PlantService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [])

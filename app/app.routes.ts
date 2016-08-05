@@ -1,6 +1,7 @@
 import { provideRouter, RouterConfig } from '@angular/router';
 import { CategoryViewComponent } from './category-view.component';
 import { GalleryViewComponent } from './gallery-view.component';
+import { PlantDetailComponent } from './plant-detail.component';
 
 const routes: RouterConfig = [
     {
@@ -15,6 +16,10 @@ const routes: RouterConfig = [
         path: '',
         redirectTo: '/gallery',
         pathMatch: 'full'
+    },
+    {
+        path: 'detail/:id',
+        component: PlantDetailComponent
     }
 ];
 
