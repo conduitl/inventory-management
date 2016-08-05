@@ -10,6 +10,7 @@ import { Plant } from './plant';
     template: `
         <div *ngIf="plant">
             <h2>{{plant.name}} details</h2>
+            <button (click)="goBack()">Back</button>
         </div>
     `
 })
@@ -29,5 +30,9 @@ export class PlantDetailComponent implements OnInit, OnDestroy {
     }
     ngOnDestroy() {
         this.sub.unsubscribe();
+    }
+
+    goBack() {
+        window.history.back();
     }
 }
