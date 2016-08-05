@@ -17,7 +17,8 @@ export class PlantDetailComponent implements OnInit, OnDestroy {
     constructor(
         private plantService: PlantService,
         private route: ActivatedRoute) {}
-    )
+    sub: any;
+    plant: Plant;
 
     ngOnInit() {
         this.sub = this.route.params.subscribe(params => {
