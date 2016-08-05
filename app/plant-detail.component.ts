@@ -10,7 +10,11 @@ import { Plant } from './plant';
     template: `
         <div *ngIf="plant">
             <h2>{{plant.name}} details</h2>
-            <button (click)="goBack()">Back</button>
+            <p>{{plant.description}}</p>
+            <img src="{{plant.image | slice:0:-4 }}-lg.jpg"/>
+            <div>
+                <button (click)="goBack()">Back</button>
+            </div>
         </div>
     `
 })

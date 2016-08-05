@@ -9,10 +9,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
 var category_1 = require('./category');
 var plant_service_1 = require('./plant.service');
 var InventoryListComponent = (function () {
-    function InventoryListComponent(plantService) {
+    function InventoryListComponent(router, plantService) {
+        this.router = router;
         this.plantService = plantService;
     }
     InventoryListComponent.prototype.ngOnInit = function () {
@@ -21,6 +23,9 @@ var InventoryListComponent = (function () {
     InventoryListComponent.prototype.getPlants = function () {
         var _this = this;
         this.plantService.getPlants().then(function (plants) { return _this.plants = plants; });
+    };
+    InventoryListComponent.prototype.gotoDetail = function (plant) {
+        this.router.navigate(['/detail', plant.id]);
     };
     __decorate([
         core_1.Input(), 
@@ -31,7 +36,7 @@ var InventoryListComponent = (function () {
             selector: 'inventory-list',
             templateUrl: 'html/inventory-list.component.html'
         }), 
-        __metadata('design:paramtypes', [plant_service_1.PlantService])
+        __metadata('design:paramtypes', [router_1.Router, plant_service_1.PlantService])
     ], InventoryListComponent);
     return InventoryListComponent;
 }());

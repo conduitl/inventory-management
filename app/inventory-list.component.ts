@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { Plant } from './plant';
 import { Category } from './category';
@@ -16,12 +17,18 @@ export class InventoryListComponent implements OnInit {
         this.getPlants();
     }
 
-    constructor(private plantService: PlantService){}
+    constructor(
+        private router: Router,
+        private plantService: PlantService){}
     @Input()
     category: Category;
     plants: Plant[];
 
     getPlants() {
         this.plantService.getPlants().then(plants => this.plants = plants);
+    }
+
+    gotoDetail(plant: Plant) {
+        this.router.navigate(['/detail', plant.id]);
     }
 }

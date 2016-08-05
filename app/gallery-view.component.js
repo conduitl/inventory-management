@@ -9,9 +9,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
 var plant_service_1 = require('./plant.service');
 var GalleryViewComponent = (function () {
-    function GalleryViewComponent(plantService) {
+    function GalleryViewComponent(router, plantService) {
+        this.router = router;
         this.plantService = plantService;
         this.plants = [];
     }
@@ -20,12 +22,16 @@ var GalleryViewComponent = (function () {
         this.plantService.getPlants()
             .then(function (plants) { return _this.plants = plants; });
     };
+    GalleryViewComponent.prototype.gotoDetail = function (plant) {
+        var link = ['/detail', plant.id];
+        this.router.navigate(link);
+    };
     GalleryViewComponent = __decorate([
         core_1.Component({
             selector: 'gallery-view',
             templateUrl: 'html/gallery-view.component.html'
         }), 
-        __metadata('design:paramtypes', [plant_service_1.PlantService])
+        __metadata('design:paramtypes', [router_1.Router, plant_service_1.PlantService])
     ], GalleryViewComponent);
     return GalleryViewComponent;
 }());
