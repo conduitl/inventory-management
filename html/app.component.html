@@ -1,8 +1,15 @@
 <div class="container">
     <h1>{{title}}</h1>
-    <nav>
-        <a [routerLink]="['/gallery']" routerLinkActive="active">Gallery</a>
-        <a [routerLink]="['/categories']">Categories</a>
+    <nav class="navbar navbar-default">
+        <!--<div class="container">-->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">KJMG</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li routerLinkActive="active"><a [routerLink]="['/gallery']">Gallery</a></li>
+                <li routerLinkActive="active"><a [routerLink]="['/categories']">Categories</a></li>
+            </ul>
+        <!--</div>-->
     </nav>
     <router-outlet></router-outlet>
 </div>

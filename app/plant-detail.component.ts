@@ -11,7 +11,7 @@ import { Plant } from './plant';
         <div *ngIf="plant">
             <h2>{{plant.name}} details</h2>
             <p>{{plant.description}}</p>
-            <img src="{{plant.image | slice:0:-4 }}-lg.jpg"/>
+            <img class="img-responsive center-block" src="{{plant.image | slice:0:-4 }}-lg.jpg"/>
             <div>
                 <button (click)="goBack()">Back</button>
             </div>
