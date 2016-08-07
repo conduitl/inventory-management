@@ -1,13 +1,13 @@
-import { Injectable } from '@angular/core';
+// import { Injectable } from '@angular/core';
 
-import { Category } from './category';
+// import { Category } from './category';
 
-import { Plant } from './plant';
-import { PlantService } from './plant-service';
+// import { Plant } from './plant';
+// import { PlantService } from './plant.service';
 
-@Injectable()
-export class PlantSearchService {
-    search(term: string) {
+// @Injectable()
+// export class PlantSearchService {
+//     search(term: string) {
 
-    }
-}
+//     }
+// }
