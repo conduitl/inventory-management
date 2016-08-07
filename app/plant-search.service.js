@@ -9,29 +9,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var mock_plants_1 = require('./mock-plants');
-var PlantService = (function () {
-    function PlantService() {
+var PlantSearchService = (function () {
+    function PlantSearchService() {
     }
-    PlantService.prototype.getPlants = function () {
-        return Promise.resolve(mock_plants_1.PLANTS);
+    PlantSearchService.prototype.search = function (term) {
     };
-    PlantService.prototype.getPlant = function (id) {
-        return this.getPlants()
-            .then(function (plants) { return plants.find(function (plant) { return plant.id === id; }); });
-    };
-    PlantService.prototype.filterPlant = function (query) {
-        var rx = new RegExp(query, 'ig');
-        return this.getPlants()
-            .then(function (plants) {
-            return plants.filter(function (plant) { return rx.test(plant.name); });
-        });
-    };
-    PlantService = __decorate([
+    PlantSearchService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [])
-    ], PlantService);
-    return PlantService;
+    ], PlantSearchService);
+    return PlantSearchService;
 }());
-exports.PlantService = PlantService;
-//# sourceMappingURL=plant.service.js.map
+exports.PlantSearchService = PlantSearchService;
+//# sourceMappingURL=plant-search.service.js.map

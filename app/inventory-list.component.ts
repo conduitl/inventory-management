@@ -23,6 +23,8 @@ export class InventoryListComponent implements OnInit {
     @Input()
     category: Category;
     plants: Plant[];
+    term: string;
+    search: string = '';
 
     getPlants() {
         this.plantService.getPlants().then(plants => this.plants = plants);
@@ -30,5 +32,19 @@ export class InventoryListComponent implements OnInit {
 
     gotoDetail(plant: Plant) {
         this.router.navigate(['/detail', plant.id]);
+    }
+
+    onKey(event: any) {
+        this.term = event.target.value;
+        if (this.term === '') {
+            this.search = '';
+        } else {
+            this.search = "| Search term '" + this.term + "'";
+        }
+        this.filterPlant(this.term);
+    }
+
+    filterPlant(query: string) {
+        this.plantService.filterPlant(query).then(plants => this.plants = plants);
     }
 }

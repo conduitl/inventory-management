@@ -1,8 +1,9 @@
 <div *ngIf="category">
-    <h2>{{category.name}} available</h2>
+    <h2>{{category.name}} available {{search}}</h2>
     <div class="input-group">
         <span class="input-group-addon" id="search-list">Search in {{category.name}}</span>
-        <input type="text" class="form-control" aria-describedby="search-list">
+        <input type="text" class="form-control" aria-describedby="search-list"
+               (keyup)="onKey($event)">
     </div>
     <br />
     <div *ngFor="let plant of plants">

@@ -11,4 +11,11 @@ export class PlantService {
         return this.getPlants()
             .then(plants => plants.find(plant => plant.id === id ));
     }
+    filterPlant(query: string) {
+        let rx = new RegExp(query, 'ig');
+        return this.getPlants()
+            .then(plants => {
+                return plants.filter(plant => rx.test(plant.name));
+            });
+    }
 }
