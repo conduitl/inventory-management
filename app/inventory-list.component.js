@@ -16,6 +16,7 @@ var InventoryListComponent = (function () {
     function InventoryListComponent(router, plantService) {
         this.router = router;
         this.plantService = plantService;
+        this.search = '';
     }
     InventoryListComponent.prototype.ngOnInit = function () {
         this.getPlants();
@@ -26,6 +27,20 @@ var InventoryListComponent = (function () {
     };
     InventoryListComponent.prototype.gotoDetail = function (plant) {
         this.router.navigate(['/detail', plant.id]);
+    };
+    InventoryListComponent.prototype.onKey = function (event) {
+        this.term = event.target.value;
+        if (this.term === '') {
+            this.search = '';
+        }
+        else {
+            this.search = "| Search term '" + this.term + "'";
+        }
+        this.filterPlant(this.term);
+    };
+    InventoryListComponent.prototype.filterPlant = function (query) {
+        var _this = this;
+        this.plantService.filterPlant(query).then(function (plants) { return _this.plants = plants; });
     };
     __decorate([
         core_1.Input(), 
