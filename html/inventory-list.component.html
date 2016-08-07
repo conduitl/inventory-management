@@ -1,7 +1,7 @@
 <div *ngIf="category">
     <h2>List of {{category.name}}</h2>
     <div *ngFor="let plant of plants">
-        <div *ngIf="category.name === plant.type">
+        <div *ngIf="category.name === 'all' || category.name === plant.type">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">{{ plant.name | slice:0:1 | uppercase }}{{ plant.name | slice:1 }}</h3>
