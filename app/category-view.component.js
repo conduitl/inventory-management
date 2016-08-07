@@ -29,6 +29,7 @@ var CategoryViewComponent = (function () {
 }());
 exports.CategoryViewComponent = CategoryViewComponent;
 var categories = [
+    { id: 0, name: 'all' },
     { id: 1, name: 'flowers' },
     { id: 2, name: 'shrubs' },
     { id: 3, name: 'trees' }
