@@ -33,7 +33,7 @@ export class InventoryListComponent implements OnInit {
     gotoDetail(plant: Plant) {
         this.router.navigate(['/detail', plant.id]);
     }
-    //TODO - separate search into search component
+
     onKey(event: any) {
         this.term = event.target.value;
         if (this.term === '') {

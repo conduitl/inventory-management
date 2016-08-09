@@ -12,7 +12,6 @@ export class PlantService {
             .then(plants => plants.find(plant => plant.id === id ));
     }
     filterPlant(query: string) {
-        // TODO - catch invalid regexp entries to avoid crashing app
         let rx = new RegExp(query, 'ig');
         return this.getPlants()
             .then(plants => {
