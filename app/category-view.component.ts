@@ -21,7 +21,7 @@ import { Category } from './category';
         </div>
         <div class="col-md-9">
             <!--Add List Component-->
-            <inventory-list [category]="selectedCategory"></inventory-list>
+            <inventory-list [category]="selectedCategory || initialSelection"></inventory-list>
         </div>
     </section>`,
     directives: [InventoryListComponent]
@@ -29,6 +29,7 @@ import { Category } from './category';
 export class CategoryViewComponent {
     public categories = categories; // exposes categories for binding
     selectedCategory: Category; // Track which category is selected
+    initialSelection: Category = this.selectedCategory || categories[0];
     onSelect(category: Category) {
         this.selectedCategory = category;
     }

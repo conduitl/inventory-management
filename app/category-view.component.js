@@ -13,6 +13,7 @@ var inventory_list_component_1 = require('./inventory-list.component');
 var CategoryViewComponent = (function () {
     function CategoryViewComponent() {
         this.categories = categories; // exposes categories for binding
+        this.initialSelection = this.selectedCategory || categories[0];
     }
     CategoryViewComponent.prototype.onSelect = function (category) {
         this.selectedCategory = category;
@@ -20,7 +21,7 @@ var CategoryViewComponent = (function () {
     CategoryViewComponent = __decorate([
         core_1.Component({
             selector: 'category-view',
-            template: "    \n    <section class=\"row\">\n        <div class=\"col-md-3\">\n            <h2>Categories</h2>\n            <ul class=\"categories list-group\">\n                <li *ngFor=\"let category of categories\"\n                    class=\"list-group-item\"\n                    [class.active]=\"category === selectedCategory\"\n                    (click)=\"onSelect(category)\">\n                    <span>{{category.id}}</span>\n                    <span>{{category.name}}</span>\n                </li>\n            </ul>\n        </div>\n        <div class=\"col-md-9\">\n            <!--Add List Component-->\n            <inventory-list [category]=\"selectedCategory\"></inventory-list>\n        </div>\n    </section>",
+            template: "    \n    <section class=\"row\">\n        <div class=\"col-md-3\">\n            <h2>Categories</h2>\n            <ul class=\"categories list-group\">\n                <li *ngFor=\"let category of categories\"\n                    class=\"list-group-item\"\n                    [class.active]=\"category === selectedCategory\"\n                    (click)=\"onSelect(category)\">\n                    <span>{{category.id}}</span>\n                    <span>{{category.name}}</span>\n                </li>\n            </ul>\n        </div>\n        <div class=\"col-md-9\">\n            <!--Add List Component-->\n            <inventory-list [category]=\"selectedCategory || initialSelection\"></inventory-list>\n        </div>\n    </section>",
             directives: [inventory_list_component_1.InventoryListComponent]
         }), 
         __metadata('design:paramtypes', [])
