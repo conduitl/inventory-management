@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { PLANTS } from './mock-plants';
+import { PLANTS } from '../data/mock-plants';
 
 @Injectable()
 export class PlantService {

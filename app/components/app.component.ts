@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router';
 
 
-import { PlantService } from './plant.service';
+import { PlantService } from '../services/plant.service';
 
 
 @Component({

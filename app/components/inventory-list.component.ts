@@ -1,11 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { Plant } from './plant';
-import { Category } from './category';
-import { PlantService } from './plant.service';
-
-
+import { Plant } from '../model/plant';
+import { Category } from '../model/category';
+import { PlantService } from '../services/plant.service';
 
 @Component({
     selector: 'inventory-list',

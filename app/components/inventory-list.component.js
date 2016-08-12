@@ -10,8 +10,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
-var category_1 = require('./category');
-var plant_service_1 = require('./plant.service');
+var category_1 = require('../model/category');
+var plant_service_1 = require('../services/plant.service');
 var InventoryListComponent = (function () {
     function InventoryListComponent(router, plantService) {
         this.router = router;

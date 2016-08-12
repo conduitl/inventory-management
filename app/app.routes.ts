@@ -1,7 +1,7 @@
 import { provideRouter, RouterConfig } from '@angular/router';
-import { CategoryViewComponent } from './category-view.component';
-import { GalleryViewComponent } from './gallery-view.component';
-import { PlantDetailComponent } from './plant-detail.component';
+import { CategoryViewComponent } from './components/category-view.component';
+import { GalleryViewComponent } from './components/gallery-view.component';
+import { PlantDetailComponent } from './components/plant-detail.component';
 
 const routes: RouterConfig = [
     {

@@ -1,4 +1,4 @@
- import { Plant } from './plant';
+ import { Plant } from '../model/plant';
  
  export const PLANTS: Plant[] = [
      { id: 1, name: 'cyclamen', type: 'flowers', image: 'img/cyclamen.jpg', 

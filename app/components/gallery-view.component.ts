@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { Plant } from './plant';
-import { PlantService } from './plant.service';
+import { Plant } from '../model/plant';
+import { PlantService } from '../services/plant.service';
 
 @Component({
     selector: 'gallery-view',
