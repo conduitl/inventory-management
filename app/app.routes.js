@@ -9,6 +9,10 @@ var routes = [
         component: category_view_component_1.CategoryViewComponent
     },
     {
+        path: 'categories/:layout',
+        component: category_view_component_1.CategoryViewComponent
+    },
+    {
         path: 'gallery',
         component: gallery_view_component_1.GalleryViewComponent
     },

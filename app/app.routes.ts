@@ -9,6 +9,10 @@ const routes: RouterConfig = [
         component: CategoryViewComponent
     },
     {
+        path: 'categories/:layout',
+        component: CategoryViewComponent
+    },
+    {
         path: 'gallery',
         component: GalleryViewComponent
     },
