@@ -10,24 +10,35 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
+var router_2 = require('@angular/router');
+var router_3 = require('@angular/router');
 var category_1 = require('../model/category');
 var plant_service_1 = require('../services/plant.service');
 var InventoryListComponent = (function () {
-    function InventoryListComponent(router, plantService) {
+    function InventoryListComponent(router, route, plantService) {
         this.router = router;
+        this.route = route;
         this.plantService = plantService;
         this.search = '';
     }
     InventoryListComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.sub = this.route.params.subscribe(function (params) {
+            _this.layout = params['layout'];
+        });
         this.getPlants();
     };
+    // Retrieve data from PlantService
     InventoryListComponent.prototype.getPlants = function () {
         var _this = this;
         this.plantService.getPlants().then(function (plants) { return _this.plants = plants; });
     };
+    // Navigate to detail page for individual item
     InventoryListComponent.prototype.gotoDetail = function (plant) {
         this.router.navigate(['/detail', plant.id]);
     };
+    // Search through currently displayed list
+    // capture user input event
     InventoryListComponent.prototype.onKey = function (event) {
         this.term = event.target.value;
         if (this.term === '') {
@@ -38,6 +49,7 @@ var InventoryListComponent = (function () {
         }
         this.filterPlant(this.term);
     };
+    // repsond to user input by filtering results
     InventoryListComponent.prototype.filterPlant = function (query) {
         var _this = this;
         this.plantService.filterPlant(query).then(function (plants) { return _this.plants = plants; });
@@ -49,9 +61,10 @@ var InventoryListComponent = (function () {
     InventoryListComponent = __decorate([
         core_1.Component({
             selector: 'inventory-list',
-            templateUrl: 'html/inventory-list.component.html'
+            templateUrl: 'html/inventory-list.component.html',
+            directives: [router_1.ROUTER_DIRECTIVES]
         }), 
-        __metadata('design:paramtypes', [router_1.Router, plant_service_1.PlantService])
+        __metadata('design:paramtypes', [router_2.Router, router_3.ActivatedRoute, plant_service_1.PlantService])
     ], InventoryListComponent);
     return InventoryListComponent;
 }());

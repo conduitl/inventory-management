@@ -14,8 +14,3 @@ import { PlantService } from '../services/plant.service';
 export class AppComponent {
     title = 'Plant Catalog';
  }
- 
-
-
-
-

@@ -5,8 +5,12 @@ import { PlantDetailComponent } from './components/plant-detail.component';
 
 const routes: RouterConfig = [
     {
-        path: 'categories',
+        path: 'categories/:layout',
         component: CategoryViewComponent
+    },
+    {
+        path: 'categories',
+        redirectTo: '/categories/list'
     },
     {
         path: 'gallery',
