@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import { InventoryListComponent } from './inventory-list.component';
-import { Category } from './category';
+import { Category } from '../model/category';
 
 @Component({
     selector: 'category-view',

@@ -2,8 +2,8 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 
 import { ActivatedRoute } from '@angular/router';
 
-import { PlantService } from './plant.service';
-import { Plant } from './plant';
+import { PlantService } from '../services/plant.service';
+import { Plant } from '../model/plant';
 
 @Component({
     selector: 'plant-detail',

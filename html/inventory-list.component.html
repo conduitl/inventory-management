@@ -1,29 +1,65 @@
 <div *ngIf="category">
     <h2>{{category.name}} available {{search}}</h2>
-    <div class="input-group">
-        <span class="input-group-addon" id="search-list">Search in {{category.name}}</span>
-        <input type="text" class="form-control" aria-describedby="search-list"
-               (keyup)="onKey($event)">
+    <!-- List Filtering and View Panel -->
+    <div class="panel panel-success list-toolbar">
+        <div class="row">
+            <div class="col-md-2">
+                <span class="badge list-toolbar-content">100 items</span>
+            </div>
+            <div class="col-md-5">
+                <div class="input-group">
+                    <span class="input-group-addon" id="search-list">Search in {{category.name}}</span>
+                    <input type="text" class="form-control" aria-describedby="search-list"
+                        (keyup)="onKey($event)">
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="btn-group pull-right" role="group">
+                    <a [routerLink]="['/categories', 'list']" routerLinkActive="active" class="btn btn-success">
+                        <span class="glyphicon glyphicon-list"></span>
+                    </a>
+                    <a [routerLink]="['/categories', 'grid']" routerLinkActive="active" class="btn btn-success">
+                        <span class="glyphicon glyphicon-th-large"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
-    <br />
+    <!-- List Results -->
     <div *ngFor="let plant of plants">
         <div *ngIf="category.name === 'all' || category.name === plant.type">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">{{ plant.name | slice:0:1 | uppercase }}{{ plant.name | slice:1 }}</h3>
-                </div>
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-md-9">
-                            {{plant.description}}
+            <!-- List View -->
+            <div *ngIf="layout === 'list' ">
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">{{ plant.name | slice:0:1 | uppercase }}{{ plant.name | slice:1 }}</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-9">
+                                {{plant.description}}
+                            </div>
+                            <div class="col-md-3 hidden-sm hidden-xs" *ngIf="plant.image">
+                                <img class="pull-right" src="{{plant.image}}"/>
+                            </div>
                         </div>
-                        <div class="col-md-3 hidden-sm hidden-xs" *ngIf="plant.image">
-                            <img class="pull-right" src="{{plant.image}}"/>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button (click)="gotoDetail(plant)">View Details</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <button (click)="gotoDetail(plant)">View Details</button>
+                </div>
+            </div>
+            <!-- Grid View -->
+            <div *ngIf="layout === 'grid' ">
+                <div *ngIf="plant.image" (click)="gotoDetail(plant)" class="gallery-tile">
+                    <div class="panel panel-success">
+                        <div class="panel-body">
+                            <img src="{{plant.image}}"/>
+                        </div>
+                        <div class="panel-footer">
+                            {{ plant.name | slice:0:1 | uppercase }}{{ plant.name | slice:1 }}
                         </div>
                     </div>
                 </div>

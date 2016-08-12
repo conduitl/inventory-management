@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router';
 
 
-import { PlantService } from './plant.service';
+import { PlantService } from '../services/plant.service';
 
 
 @Component({
@@ -14,8 +14,3 @@ import { PlantService } from './plant.service';
 export class AppComponent {
     title = 'Plant Catalog';
  }
- 
-
-
-
-
