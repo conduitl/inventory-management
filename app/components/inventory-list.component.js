@@ -28,13 +28,17 @@ var InventoryListComponent = (function () {
         });
         this.getPlants();
     };
+    // Retrieve data from PlantService
     InventoryListComponent.prototype.getPlants = function () {
         var _this = this;
         this.plantService.getPlants().then(function (plants) { return _this.plants = plants; });
     };
+    // Navigate to detail page for individual item
     InventoryListComponent.prototype.gotoDetail = function (plant) {
         this.router.navigate(['/detail', plant.id]);
     };
+    // Search through currently displayed list
+    // capture user input event
     InventoryListComponent.prototype.onKey = function (event) {
         this.term = event.target.value;
         if (this.term === '') {
@@ -45,6 +49,7 @@ var InventoryListComponent = (function () {
         }
         this.filterPlant(this.term);
     };
+    // repsond to user input by filtering results
     InventoryListComponent.prototype.filterPlant = function (query) {
         var _this = this;
         this.plantService.filterPlant(query).then(function (plants) { return _this.plants = plants; });

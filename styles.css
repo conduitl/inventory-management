@@ -1,6 +1,7 @@
 .gallery-tile {
     float: left;
     margin: 3px;
+    cursor: pointer;
 }
 .gallery-tile .panel {
     margin-top: 3px;

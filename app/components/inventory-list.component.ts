@@ -27,6 +27,7 @@ export class InventoryListComponent implements OnInit {
     search: string = '';
     sub: any;
     layout: string;
+    public displayedListElements: [number];
 
     ngOnInit() {
         this.sub = this.route.params.subscribe(params => {
@@ -34,15 +35,17 @@ export class InventoryListComponent implements OnInit {
         });
         this.getPlants();
     }
-
+    // Retrieve data from PlantService
     getPlants() {
         this.plantService.getPlants().then(plants => this.plants = plants);
     }
-
+    // Navigate to detail page for individual item
     gotoDetail(plant: Plant) {
         this.router.navigate(['/detail', plant.id]);
     }
 
+    // Search through currently displayed list
+        // capture user input event
     onKey(event: any) {
         this.term = event.target.value;
         if (this.term === '') {
@@ -52,8 +55,9 @@ export class InventoryListComponent implements OnInit {
         }
         this.filterPlant(this.term);
     }
-
+        // repsond to user input by filtering results
     filterPlant(query: string) {
         this.plantService.filterPlant(query).then(plants => this.plants = plants);
     }
+
 }
