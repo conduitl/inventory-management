@@ -30,7 +30,7 @@
         <div *ngIf="category.name === 'all' || category.name === plant.type">
             <!-- List View -->
             <div *ngIf="layout === 'list' ">
-                <div class="panel panel-default">
+                <div class="panel panel-success">
                     <div class="panel-heading">
                         <h3 class="panel-title">{{ plant.name | slice:0:1 | uppercase }}{{ plant.name | slice:1 }}</h3>
                     </div>
