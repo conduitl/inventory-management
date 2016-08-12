@@ -33,6 +33,7 @@
                 <div class="panel panel-success">
                     <div class="panel-heading">
                         <h3 class="panel-title">{{ plant.name | slice:0:1 | uppercase }}{{ plant.name | slice:1 }}</h3>
+                        <span class="glyphicon glyphicon-plus pull-right"></span>
                     </div>
                     <div class="panel-body">
                         <div class="row">
@@ -46,6 +47,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <button (click)="gotoDetail(plant)">View Details</button>
+                                <button>Add to Cart</button>
                             </div>
                         </div>
                     </div>

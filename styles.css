@@ -9,7 +9,10 @@
     background-color: #5cb85c;
     border-color:  #5cb85c;
 }
-
+/* Panels in list layout views */
+.panel-title {
+    display: inline-block;
+}
 /* Tiles in grid layout views */
 .gallery-tile {
     float: left;
