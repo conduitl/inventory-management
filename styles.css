@@ -1,3 +1,16 @@
+/* Sidebar list-group-items */
+.list-group-item {
+    cursor: pointer;
+}
+.list-group-item:hover {
+    background-color: #e7e7e7;
+}
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    background-color: #5cb85c;
+    border-color:  #5cb85c;
+}
+
+/* Tiles in grid layout views */
 .gallery-tile {
     float: left;
     margin: 3px;
@@ -24,6 +37,7 @@
     background-color: #dff0d8;
 }
 
+/* Toolbar used to filter returned lists and toggle layout of view */
 .list-toolbar {
     padding: 6px 12px;
 }
