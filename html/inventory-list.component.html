@@ -1,11 +1,31 @@
 <div *ngIf="category">
     <h2>{{category.name}} available {{search}}</h2>
-    <div class="input-group">
-        <span class="input-group-addon" id="search-list">Search in {{category.name}}</span>
-        <input type="text" class="form-control" aria-describedby="search-list"
-               (keyup)="onKey($event)">
+    <!-- List Filtering and View Panel -->
+    <div class="panel panel-success list-toolbar">
+        <div class="row">
+            <div class="col-md-2">
+                <span class="badge list-toolbar-content">100 items</span>
+            </div>
+            <div class="col-md-5">
+                <div class="input-group">
+                    <span class="input-group-addon" id="search-list">Search in {{category.name}}</span>
+                    <input type="text" class="form-control" aria-describedby="search-list"
+                        (keyup)="onKey($event)">
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="btn-group pull-right" role="group">
+                    <a href="#" class="btn btn-success">
+                        <span class="glyphicon glyphicon-list"></span>
+                    </a>
+                    <a href="#" class="btn btn-success">
+                        <span class="glyphicon glyphicon-th-large"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
-    <br />
+    <!-- List Results -->
     <div *ngFor="let plant of plants">
         <div *ngIf="category.name === 'all' || category.name === plant.type">
             <div class="panel panel-default">
