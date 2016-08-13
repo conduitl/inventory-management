@@ -50,3 +50,5 @@ Temporary Items
 node_modules
 
 # Excel files
+*.xls
+*.xlsx
