@@ -9,12 +9,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var mock_plants_1 = require('../data/mock-plants');
+var mock_data_1 = require('../data/mock-data');
 var CategoryService = (function () {
     function CategoryService() {
     }
     CategoryService.prototype.getCategories = function () {
-        return Promise.resolve(mock_plants_1.CATEGORIES);
+        return Promise.resolve(mock_data_1.CATEGORIES);
     };
     CategoryService = __decorate([
         core_1.Injectable(), 

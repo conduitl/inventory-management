@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { CATEGORIES } from '../data/mock-plants';
+import { CATEGORIES } from '../data/mock-data';
 
 @Injectable()
 export class CategoryService {
