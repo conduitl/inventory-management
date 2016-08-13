@@ -9,24 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var router_1 = require('@angular/router');
-var plant_service_1 = require('../services/plant.service');
-var category_service_1 = require('../services/category.service');
-var supplier_service_1 = require('../services/supplier.service');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.title = 'KJ Majestic Garden';
+var mock_data_1 = require('../data/mock-data');
+var SupplierService = (function () {
+    function SupplierService() {
     }
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'my-app',
-            templateUrl: 'html/app.component.html',
-            directives: [router_1.ROUTER_DIRECTIVES],
-            providers: [plant_service_1.PlantService, category_service_1.CategoryService, supplier_service_1.SupplierService]
-        }), 
+    SupplierService.prototype.getSuppliers = function () {
+        return Promise.resolve(mock_data_1.SUPPLIERS);
+    };
+    SupplierService = __decorate([
+        core_1.Injectable(), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], SupplierService);
+    return SupplierService;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.SupplierService = SupplierService;
+//# sourceMappingURL=supplier.service.js.map

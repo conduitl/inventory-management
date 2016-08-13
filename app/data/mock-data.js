@@ -5,6 +5,14 @@ exports.CATEGORIES = [
     { id: 2, name: 'shrubs' },
     { id: 3, name: 'trees' }
 ];
+exports.SUPPLIERS = [
+    { name: 'Buchanan\'s Native Plants', phone: '', address: '' },
+    { name: 'Cornelius Nursery', phone: '', address: '' },
+    { name: 'Joshua\'s Native Plants & Garden', phone: '', address: '' },
+    { name: 'Another Place In Time', phone: '', address: '' },
+    { name: 'Thompson + Hanson', phone: '', address: '' },
+    { name: 'RCW Nurseries, Inc.', phone: '', address: '' }
+];
 exports.PLANTS = [
     { id: 1, name: 'cyclamen', type: 'flowers', image: 'img/cyclamen.jpg',
         description: 'Cyclamen is a genus of 23 species of perennial flowering plants in the family Primulaceae. Cyclamen species are native to Europe and the Mediterranean Basin east to Iran, with one species in Somalia. They grow from tubers and are valued for their flowers with upswept petals and variably patterned leaves. (Wikipedia)' },

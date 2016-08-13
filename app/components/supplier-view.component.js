@@ -9,15 +9,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var supplier_service_1 = require('../services/supplier.service');
 var SupplierViewComponent = (function () {
-    function SupplierViewComponent() {
+    function SupplierViewComponent(supplierService) {
+        this.supplierService = supplierService;
     }
+    SupplierViewComponent.prototype.ngOnInit = function () {
+        this.getSuppliers();
+    };
+    SupplierViewComponent.prototype.getSuppliers = function () {
+        var _this = this;
+        this.supplierService.getSuppliers()
+            .then(function (suppliers) {
+            _this.suppliers = suppliers;
+        });
+    };
     SupplierViewComponent = __decorate([
         core_1.Component({
             selector: 'supplier-view',
-            template: '<h1>Supplier</h1>'
+            template: "\n        <h1>Suppliers</h1>\n        <ul>\n            <li *ngFor=\"let supplier of suppliers\">\n                {{supplier.name}}\n            </li>\n        </ul>\n        "
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [supplier_service_1.SupplierService])
     ], SupplierViewComponent);
     return SupplierViewComponent;
 }());

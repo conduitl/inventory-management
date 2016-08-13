@@ -1,11 +1,21 @@
  import { Plant } from '../model/plant';
  import { Category } from '../model/category';
+ import { Supplier } from '../model/supplier';
 
  export const CATEGORIES: Category[] = [
      { id: 0, name: 'all' },
      { id: 1, name: 'flowers'},
      { id: 2, name: 'shrubs'},
      { id: 3, name: 'trees'}
+ ];
+
+ export const SUPPLIERS: Supplier[] = [
+     { name: 'Buchanan\'s Native Plants', phone: '', address: ''},
+     { name: 'Cornelius Nursery', phone: '', address: ''},
+     { name: 'Joshua\'s Native Plants & Garden', phone: '', address: ''},
+     { name: 'Another Place In Time', phone: '', address: ''},
+     { name: 'Thompson + Hanson', phone: '', address: ''},
+     { name: 'RCW Nurseries, Inc.', phone: '', address: ''}
  ];
  
  export const PLANTS: Plant[] = [
