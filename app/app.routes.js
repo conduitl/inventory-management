@@ -2,6 +2,7 @@
 var router_1 = require('@angular/router');
 var category_view_component_1 = require('./components/category-view.component');
 var gallery_view_component_1 = require('./components/gallery-view.component');
+var supplier_view_component_1 = require('./components/supplier-view.component');
 var plant_detail_component_1 = require('./components/plant-detail.component');
 var routes = [
     {
@@ -15,6 +16,10 @@ var routes = [
     {
         path: 'gallery',
         component: gallery_view_component_1.GalleryViewComponent
+    },
+    {
+        path: 'suppliers',
+        component: supplier_view_component_1.SupplierViewComponent
     },
     {
         path: '',
