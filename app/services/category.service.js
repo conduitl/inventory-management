@@ -9,23 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var router_1 = require('@angular/router');
-var plant_service_1 = require('../services/plant.service');
-var category_service_1 = require('../services/category.service');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.title = 'Plant Catalog';
+var mock_plants_1 = require('../data/mock-plants');
+var CategoryService = (function () {
+    function CategoryService() {
     }
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'my-app',
-            templateUrl: 'html/app.component.html',
-            directives: [router_1.ROUTER_DIRECTIVES],
-            providers: [plant_service_1.PlantService, category_service_1.CategoryService]
-        }), 
+    CategoryService.prototype.getCategories = function () {
+        return Promise.resolve(mock_plants_1.CATEGORIES);
+    };
+    CategoryService = __decorate([
+        core_1.Injectable(), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], CategoryService);
+    return CategoryService;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.CategoryService = CategoryService;
+//# sourceMappingURL=category.service.js.map

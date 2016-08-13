@@ -1,4 +1,10 @@
 "use strict";
+exports.CATEGORIES = [
+    { id: 0, name: 'all' },
+    { id: 1, name: 'flowers' },
+    { id: 2, name: 'shrubs' },
+    { id: 3, name: 'trees' }
+];
 exports.PLANTS = [
     { id: 1, name: 'cyclamen', type: 'flowers', image: 'img/cyclamen.jpg',
         description: 'Cyclamen is a genus of 23 species of perennial flowering plants in the family Primulaceae. Cyclamen species are native to Europe and the Mediterranean Basin east to Iran, with one species in Somalia. They grow from tubers and are valued for their flowers with upswept petals and variably patterned leaves. (Wikipedia)' },

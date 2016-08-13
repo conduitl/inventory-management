@@ -10,11 +10,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var inventory_list_component_1 = require('./inventory-list.component');
+var category_service_1 = require('../services/category.service');
 var CategoryViewComponent = (function () {
-    function CategoryViewComponent() {
-        this.categories = categories; // exposes categories for binding
-        this.initialSelection = this.selectedCategory || categories[0];
+    function CategoryViewComponent(categoryService) {
+        this.categoryService = categoryService;
     }
+    CategoryViewComponent.prototype.ngOnInit = function () {
+        this.getCategories();
+    };
+    CategoryViewComponent.prototype.getCategories = function () {
+        var _this = this;
+        this.categoryService.getCategories()
+            .then(function (categories) {
+            _this.categories = categories;
+            _this.initialSelection = _this.selectedCategory || _this.categories[0];
+        });
+    };
     CategoryViewComponent.prototype.onSelect = function (category) {
         this.selectedCategory = category;
     };
@@ -24,15 +35,9 @@ var CategoryViewComponent = (function () {
             template: "    \n    <section class=\"row\">\n        <div class=\"col-md-3\">\n            <h2>Categories</h2>\n            <ul class=\"categories list-group\">\n                <li *ngFor=\"let category of categories\"\n                    class=\"list-group-item\"\n                    [class.active]=\"category === selectedCategory\"\n                    (click)=\"onSelect(category)\">\n                    <span>{{category.id}}</span>\n                    <span>{{category.name}}</span>\n                </li>\n            </ul>\n        </div>\n        <div class=\"col-md-9\">\n            <!--Add List Component-->\n            <inventory-list [category]=\"selectedCategory || initialSelection\"></inventory-list>\n        </div>\n    </section>",
             directives: [inventory_list_component_1.InventoryListComponent]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [category_service_1.CategoryService])
     ], CategoryViewComponent);
     return CategoryViewComponent;
 }());
 exports.CategoryViewComponent = CategoryViewComponent;
-var categories = [
-    { id: 0, name: 'all' },
-    { id: 1, name: 'flowers' },
-    { id: 2, name: 'shrubs' },
-    { id: 3, name: 'trees' }
-];
 //# sourceMappingURL=category-view.component.js.map

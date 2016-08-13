@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { InventoryListComponent } from './inventory-list.component';
+import { CategoryService } from '../services/category.service';
 import { Category } from '../model/category';
 
 @Component({
@@ -26,18 +27,25 @@ import { Category } from '../model/category';
     </section>`,
     directives: [InventoryListComponent]
 })
-export class CategoryViewComponent {
-    public categories = categories; // exposes categories for binding
+export class CategoryViewComponent implements OnInit {
+    constructor(
+        private categoryService: CategoryService
+    ){}
+    categories: Category[];
     selectedCategory: Category; // Track which category is selected
-    initialSelection: Category = this.selectedCategory || categories[0];
+    initialSelection: Category; // Define selection on load
+
+    ngOnInit() {
+        this.getCategories();
+    }
+    getCategories() {
+        this.categoryService.getCategories()
+            .then(categories => {
+                this.categories = categories;
+                this.initialSelection = this.selectedCategory || this.categories[0];
+            });
+    }
     onSelect(category: Category) {
         this.selectedCategory = category;
     }
 }
-
- let categories: Category[] = [
-     { id: 0, name: 'all' },
-     { id: 1, name: 'flowers'},
-     { id: 2, name: 'shrubs'},
-     { id: 3, name: 'trees'}
- ];

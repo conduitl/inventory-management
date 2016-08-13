@@ -1,4 +1,12 @@
  import { Plant } from '../model/plant';
+ import { Category } from '../model/category';
+
+ export const CATEGORIES: Category[] = [
+     { id: 0, name: 'all' },
+     { id: 1, name: 'flowers'},
+     { id: 2, name: 'shrubs'},
+     { id: 3, name: 'trees'}
+ ];
  
  export const PLANTS: Plant[] = [
      { id: 1, name: 'cyclamen', type: 'flowers', image: 'img/cyclamen.jpg', 
