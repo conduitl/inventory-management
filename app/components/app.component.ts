@@ -13,5 +13,5 @@ import { CategoryService } from '../services/category.service';
   providers: [PlantService, CategoryService]
 })
 export class AppComponent {
-    title = 'Plant Catalog';
+    title = 'KJ Majestic Garden';
  }

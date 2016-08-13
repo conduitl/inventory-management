@@ -14,7 +14,7 @@ var plant_service_1 = require('../services/plant.service');
 var category_service_1 = require('../services/category.service');
 var AppComponent = (function () {
     function AppComponent() {
-        this.title = 'Plant Catalog';
+        this.title = 'KJ Majestic Garden';
     }
     AppComponent = __decorate([
         core_1.Component({
