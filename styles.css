@@ -1,3 +1,8 @@
+/* Images */
+img.pull-right {
+    border-radius: 6px;
+}
+
 /* Sidebar list-group-items */
 .list-group-item {
     cursor: pointer;
