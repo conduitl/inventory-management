@@ -3,6 +3,11 @@ img.pull-right {
     border-radius: 6px;
 }
 
+.grid-tile img {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
 /* Sidebar list-group-items */
 .list-group-item {
     cursor: pointer;
