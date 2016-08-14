@@ -21,7 +21,7 @@ const routes: RouterConfig = [
     {
         path: 'designs',
         component: DesignsViewComponent
-    }
+    },
     {
         path: 'suppliers',
         component: SupplierViewComponent

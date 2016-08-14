@@ -22,12 +22,24 @@ var DesignsViewComponent = (function () {
         this.designService.getDesigns()
             .then(function (designs) {
             _this.designs = designs;
+            _this.activePhotos = _this.initializePhotos(designs);
         });
+    };
+    DesignsViewComponent.prototype.initializePhotos = function (designs) {
+        var active;
+        for (var i = 0; i < designs.length; i++) {
+            active.push({
+                design: designs[i].name,
+                selected: 0,
+                count: designs[i].photos.length
+            });
+        }
+        return active;
     };
     DesignsViewComponent = __decorate([
         core_1.Component({
             selector: 'designs-view',
-            template: "\n        <h1>Designs</h1>\n        <ul>\n            <li *ngFor=\"let design of designs\">\n                {{design.name}}\n            </li>\n        </ul>\n    "
+            templateUrl: 'html/designs-view.component.html'
         }), 
         __metadata('design:paramtypes', [design_service_1.DesignService])
     ], DesignsViewComponent);

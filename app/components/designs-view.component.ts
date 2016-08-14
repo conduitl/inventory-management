@@ -5,14 +5,7 @@ import { Design } from '../model/design';
 
 @Component({
     selector: 'designs-view',
-    template: `
-        <h1>Designs</h1>
-        <ul>
-            <li *ngFor="let design of designs">
-                {{design.name}}
-            </li>
-        </ul>
-    `
+    templateUrl: 'html/designs-view.component.html'
 })
 
 export class DesignsViewComponent implements OnInit {
@@ -20,6 +13,7 @@ export class DesignsViewComponent implements OnInit {
         private designService: DesignService
     ){}
     designs: Design[];
+    activePhotos: [{}]; // not yet in use... for cycling through photos
 
     ngOnInit() {
         this.getDesigns();
@@ -28,6 +22,18 @@ export class DesignsViewComponent implements OnInit {
         this.designService.getDesigns()
             .then(designs => {
                 this.designs = designs;
+                this.activePhotos = this.initializePhotos(designs);
             });
+    }
+    initializePhotos(designs: Design[] ):[{}] {
+        let active: [{}];
+        for (let i = 0; i < designs.length; i++ ) {
+            active.push({
+                design   : designs[i].name,
+                selected : 0,
+                count    : designs[i].photos.length 
+            });
+        }
+        return active;
     }
 }

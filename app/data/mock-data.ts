@@ -12,7 +12,7 @@
  ];
 
  export const DESIGNS: Design[] = [
-     { name: '202 N Hall', photos: ['']},
+     { name: '202 N Hall', photos: ['img/nhall1.jpg', 'img/nhall2.jpg' ,'img/nhall3.jpg', 'img/nhall4.jpg', 'img/nhall5.jpg']},
      { name: '1010 Majestic Oak', photos: ['']}
  ]
 
