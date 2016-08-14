@@ -1,5 +1,5 @@
 export class Supplier {
-    name: string,
-    phone: string,
-    address: string
+    name: string;
+    phone: string;
+    address: string;
 }
