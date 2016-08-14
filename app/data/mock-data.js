@@ -3,7 +3,8 @@ exports.CATEGORIES = [
     { id: 0, name: 'all' },
     { id: 1, name: 'flowers' },
     { id: 2, name: 'shrubs' },
-    { id: 3, name: 'trees' }
+    { id: 3, name: 'trees' },
+    { id: 4, name: 'soil' }
 ];
 exports.SUPPLIERS = [
     { name: 'Buchanan\'s Native Plants', phone: '', address: '' },
@@ -51,6 +52,8 @@ exports.PLANTS = [
         description: 'Asparagus aethiopicus, Sprenger\'s Asparagus, is a plant native to the Cape Provinces and the Northern Provinces of South Africa. Often used as an ornamental plant, it is considered an invasive weed in many locations. Asparagus fern and foxtail fern are common names; however, it is unrelated to true ferns.' },
     { id: 20, name: 'monrovia', type: 'shrubs', image: null, description: '' },
     { id: 21, name: 'jatropha', type: 'shrubs', image: null, description: '' },
-    { id: 22, name: 'thryallis', type: 'shrubs', image: null, description: '' }
+    { id: 22, name: 'gypsum', type: 'soil', image: 'img/gypsum.jpg', description: 'gypsum' },
+    { id: 23, name: 'garden mix', type: 'soil', image: 'img/garden-mix.jpg', description: 'garden mix' },
+    { id: 24, name: 'pine mulch', type: 'soil', image: 'img/pine-mulch.jpg', description: 'pine mulch' }
 ];
 //# sourceMappingURL=mock-data.js.map
