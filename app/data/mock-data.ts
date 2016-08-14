@@ -1,5 +1,6 @@
  import { Plant } from '../model/plant';
  import { Category } from '../model/category';
+ import { Design } from '../model/design';
  import { Supplier } from '../model/supplier';
 
  export const CATEGORIES: Category[] = [
@@ -9,6 +10,11 @@
      { id: 3, name: 'trees'},
      { id: 4, name: 'soil' }
  ];
+
+ export const DESIGNS: Design[] = [
+     { name: '202 N Hall', photos: ['']},
+     { name: '1010 Majestic Oak', photos: ['']}
+ ]
 
  export const SUPPLIERS: Supplier[] = [
      { name: 'Buchanan\'s Native Plants', phone: '', address: ''},

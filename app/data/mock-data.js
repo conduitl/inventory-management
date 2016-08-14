@@ -6,6 +6,10 @@ exports.CATEGORIES = [
     { id: 3, name: 'trees' },
     { id: 4, name: 'soil' }
 ];
+exports.DESIGNS = [
+    { name: '202 N Hall', photos: [''] },
+    { name: '1010 Majestic Oak', photos: [''] }
+];
 exports.SUPPLIERS = [
     { name: 'Buchanan\'s Native Plants', phone: '', address: '' },
     { name: 'Cornelius Nursery', phone: '', address: '' },

@@ -1,6 +1,7 @@
 import { provideRouter, RouterConfig } from '@angular/router';
 import { CategoryViewComponent } from './components/category-view.component';
 import { GalleryViewComponent } from './components/gallery-view.component';
+import { DesignsViewComponent } from './components/designs-view.component';
 import { SupplierViewComponent } from './components/supplier-view.component';
 import { PlantDetailComponent } from './components/plant-detail.component';
 
@@ -17,6 +18,10 @@ const routes: RouterConfig = [
         path: 'gallery',
         component: GalleryViewComponent
     },
+    {
+        path: 'designs',
+        component: DesignsViewComponent
+    }
     {
         path: 'suppliers',
         component: SupplierViewComponent
