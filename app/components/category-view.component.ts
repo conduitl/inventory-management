@@ -6,25 +6,7 @@ import { Category } from '../model/category';
 
 @Component({
     selector: 'category-view',
-    template: `    
-    <section class="row">
-        <div class="col-md-3">
-            <h2>Categories</h2>
-            <ul class="categories list-group">
-                <li *ngFor="let category of categories"
-                    class="list-group-item"
-                    [class.active]="category === selectedCategory"
-                    (click)="onSelect(category)">
-                    <span>{{category.id}}</span>
-                    <span>{{category.name}}</span>
-                </li>
-            </ul>
-        </div>
-        <div class="col-md-9">
-            <!--Add List Component-->
-            <inventory-list [category]="selectedCategory || initialSelection"></inventory-list>
-        </div>
-    </section>`,
+    templateUrl: 'html/category-view.component.html',
     directives: [InventoryListComponent]
 })
 export class CategoryViewComponent implements OnInit {
