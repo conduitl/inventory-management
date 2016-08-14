@@ -19,28 +19,28 @@ img.pull-right {
     display: inline-block;
 }
 /* Tiles in grid layout views */
-.gallery-tile {
+.grid-tile {
     float: left;
     margin: 3px;
     cursor: pointer;
 }
-.gallery-tile .panel {
+.grid-tile .panel {
     margin-top: 3px;
     margin-bottom: 3px;
 }
-.gallery-tile .panel-body {
+.grid-tile .panel-body {
     padding: 0;
     background-color: #5cb85c;
 }
-.gallery-tile .panel-body img {
+.grid-tile .panel-body img {
     opacity: 1;
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
 }
-.gallery-tile:hover .panel-body img {
+.grid-tile:hover .panel-body img {
     opacity: .5;
 }
-.gallery-tile .panel-footer {
+.grid-tile .panel-footer {
     text-align: center;
     background-color: #dff0d8;
 }

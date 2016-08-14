@@ -55,7 +55,7 @@
             </div>
             <!-- Grid View -->
             <div *ngIf="layout === 'grid' ">
-                <div *ngIf="plant.image" (click)="gotoDetail(plant)" class="gallery-tile">
+                <div *ngIf="plant.image" (click)="gotoDetail(plant)" class="grid-tile">
                     <div class="panel panel-success">
                         <div class="panel-body">
                             <img src="{{plant.image}}"/>
