@@ -9,7 +9,7 @@
      { id: 3, name: 'trees'},
      { id: 4, name: 'soil' }
  ];
- 
+
  export const SUPPLIERS: Supplier[] = [
      { name: 'Buchanan\'s Native Plants', phone: '', address: ''},
      { name: 'Cornelius Nursery', phone: '', address: ''},
@@ -34,9 +34,12 @@
         description: 'Many varieties of kale and cabbage are grown mainly for their ornamental leaves, which are brilliant white, red, pink, lavender, blue or violet in the interior of the rosette. Ornamental kale is as edible as any other variety.[12]'   },
      { id: 7, name: 'maidenhair', type: 'flowers', image: 'img/maidenhair.jpg', 
         description: 'Adiantum /ˌædiˈæntəm/,[1] the maidenhair fern, is a genus of about 200 species of ferns in the Vittarioideae subfamily of the family Pteridaceae,[2] though some researchers place it in its own family, Adiantaceae. The genus name comes from Greek, meaning "not wetting", referring to the fronds\' ability to shed water without becoming wet.' },
-     { id: 8, name: 'dracaena', type: 'flowers', image: null, description: ''   },
-     { id: 9, name: 'creeping jenny', type: 'flowers', image: null, description: '' },
-     { id: 10, name: 'English ivy', type: 'flowers', image: null, description: ''   },
+     { id: 8, name: 'dracaena', type: 'flowers', image: 'img/dracaena.jpg', 
+        description: 'Dracaena (/drəˈsiːnə/,[2] derived from the romanized form of the Ancient Greekδράκαινα – drakaina, "female dragon", is a genus of about 120 species of trees andsucculent shrubs.[3] In the APG III classification system, it is placed in the familyAsparagaceae, subfamily Nolinoideae (formerly the family Ruscaceae).[4] It has also formerly been separated (sometimes with Cordyline) into the family Dracaenaceae or placed in the Agavaceae (now Agavoideae).'   },
+     { id: 9, name: 'creeping jenny', type: 'flowers', image: 'img/creeping-jenny.jpg', 
+        description: 'Lysimachia nummularia (syn. Lysimachia zawadzkii Wiesner) is a species of flowering plant in the family Primulaceae. ' },
+     { id: 10, name: 'English ivy', type: 'flowers', image: 'img/english-ivy.jpg', 
+        description: 'Hedera helix (common ivy, English ivy, European ivy, or just ivy) is a species offlowering plant in the family Araliaceae, native to most of Europe and western Asia. A rampant, clinging evergreen vine, it is a familiar sight in gardens, waste spaces, on house walls, tree trunks and in wild areas across its native habitat. It is labeled as an invasive species in a number of areas where it has been introduced.'   },
      { id: 11, name: 'tipu tree', type: 'trees', image: 'img/tipu.jpg', 
         description: 'Tipuana tipu, also known as tipa,[3] rosewood and pride of Bolivia, is a South American tree. It is the only member of the genus Tipuana.[4][5] It was recently assigned to the informal monophyletic Pterocarpus clade within the Dalbergieae.[1][2]'},
      { id: 12, name: 'cathedral oak', type: 'trees', image: 'img/oak.jpg', 
@@ -47,7 +50,7 @@
         description: 'Ulmus parvifolia, commonly known as the Chinese elm[1] or lacebark elm, is a species native to eastern Asia, including China, India, Taiwan, Japan, North Korea, and Vietnam.[2] It has been described as "one of the most splendid elms, having the poise of a graceful Nothofagus".[3] The tree was introduced to the UK in 1794 by James Main, who collected in China for Gilbert Slater of Low Layton, Essex.[4][5]' },
      { id: 15, name: 'camphor', type: 'trees', image: 'img/camphor.jpg', 
         description: 'Cinnamomum camphora (commonly known as camphor tree, camphorwood or camphor laurel) is a large evergreen tree that grows up to 20–30 m (66–98 ft) tall.[1] The leaves have a glossy, waxy appearance and smell of camphor when crushed. In spring, it produces bright green foliage with masses of small white flowers. It produces clusters of black, berry-like fruit around 1 cm (0.39 in) in diameter. Its pale bark is very rough and fissured vertically. Cinnamomum camphora is native to China south of the Yangtze River, Taiwan, southern Japan, Korea, and Vietnam, and has been introduced to many other countries.[1] In Japan, where the tree is called kusunoki, five camphor trees are known with a trunk circumference above 20 m, with the largest tree (Kamou no Ohkusu) reaching the circumference of 24.22 m.[2]' },
-     { id: 16, name: 'shumard red oak', type: 'trees', image: 'img/shumardoak.jpg', 
+     { id: 16, name: 'shumard oak', type: 'trees', image: 'img/shumardoak.jpg', 
         description: 'Quercus shumardii, the Shumard oak, spotted oak, Schneck oak, Shumard red oak, or swamp red oak, is one of the largest of the oak species in the red oak group (Quercus section Lobatae). It is closely related to Texas red oak (Quercus buckleyi), Nuttall\'s oak (Quercus texana and Chisos red oak (Quercus gravesii).' },
      { id: 17, name: 'azaleas', type: 'shrubs', image: 'img/azaleas.jpg', 
         description: 'Azaleas are flowering shrubs in the genus Rhododendron, particularly the former sections Tsutsuji (evergreen) and Pentanthera (deciduous). Azaleas bloom in spring, their flowers often lasting several weeks. Shade tolerant, they prefer living near or under trees. They are part of the family Ericaceae.' },
@@ -55,8 +58,9 @@
         description: 'Cercis is a genus of about 10 species in the subfamily Caesalpinioideae of the pea family Fabaceae,[2] native to warm temperate regions. It contains small deciduous trees or large shrubs commonly known as redbuds.[5] They are characterised by simple, rounded to heart-shaped leaves and pinkish-red flowers borne in the early spring on bare leafless shoots, on both branches and trunk ("cauliflory").' },
      { id: 19, name: 'foxtail', type: 'shrubs', image: 'img/foxtail.jpg', 
         description: 'Asparagus aethiopicus, Sprenger\'s Asparagus, is a plant native to the Cape Provinces and the Northern Provinces of South Africa. Often used as an ornamental plant, it is considered an invasive weed in many locations. Asparagus fern and foxtail fern are common names; however, it is unrelated to true ferns.'},
-     { id: 20, name: 'monrovia', type: 'shrubs', image: null, description: ''},
-     { id: 21, name: 'jatropha', type: 'shrubs', image: null, description: ''},
+     { id: 20, name: 'monrovia', type: 'shrubs', image: 'img/monrovia.jpg', description: 'monrovia'},
+     { id: 21, name: 'jatropha', type: 'shrubs', image: 'img/jatropha.jpg', 
+        description: 'Jatropha curcas is a species of flowering plant in the spurge family, Euphorbiaceae, that is native to the American tropics, most likely Mexico and Central America. It is cultivated in tropical and subtropical regions around the world, becoming naturalized in some areas.'},
      { id: 22, name: 'gypsum', type: 'soil', image: 'img/gypsum.jpg', description: 'gypsum'},
      { id: 23, name: 'garden mix', type: 'soil', image: 'img/garden-mix.jpg', description: 'garden mix'},
      { id: 24, name: 'pine mulch', type: 'soil', image: 'img/pine-mulch.jpg', description: 'pine mulch'}
