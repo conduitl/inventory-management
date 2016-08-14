@@ -7,29 +7,7 @@ import { Plant } from '../model/plant';
 
 @Component({
     selector: 'plant-detail',
-    template: `
-        <div *ngIf="plant">
-            <h2>{{plant.name}} details</h2>
-            <div class="row">
-                <div class="col-md-9">
-                    <p>{{plant.description}}</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-9">
-                    <img class="img-responsive center-block" src="{{plant.image | slice:0:-4 }}-lg.jpg"/>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-9">
-                    <p>{{lorem}}</p>
-                </div>
-            </div>
-            <div>
-                <button (click)="goBack()">Back</button>
-            </div>
-        </div>
-    `
+    templateUrl: 'html/plant-detail.component.html' 
 })
 export class PlantDetailComponent implements OnInit, OnDestroy {
     constructor(

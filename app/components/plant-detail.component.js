@@ -36,7 +36,7 @@ var PlantDetailComponent = (function () {
     PlantDetailComponent = __decorate([
         core_1.Component({
             selector: 'plant-detail',
-            template: "\n        <div *ngIf=\"plant\">\n            <h2>{{plant.name}} details</h2>\n            <div class=\"row\">\n                <div class=\"col-md-9\">\n                    <p>{{plant.description}}</p>\n                </div>\n            </div>\n            <div class=\"row\">\n                <div class=\"col-md-9\">\n                    <img class=\"img-responsive center-block\" src=\"{{plant.image | slice:0:-4 }}-lg.jpg\"/>\n                </div>\n            </div>\n            <div class=\"row\">\n                <div class=\"col-md-9\">\n                    <p>{{lorem}}</p>\n                </div>\n            </div>\n            <div>\n                <button (click)=\"goBack()\">Back</button>\n            </div>\n        </div>\n    "
+            templateUrl: 'html/plant-detail.component.html'
         }), 
         __metadata('design:paramtypes', [plant_service_1.PlantService, router_1.ActivatedRoute])
     ], PlantDetailComponent);
