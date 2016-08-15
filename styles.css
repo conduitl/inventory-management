@@ -38,7 +38,10 @@ img.pull-right {
 .design .btn .glyphicon {
     font-size: 40px;
 }
-
+hr {
+    margin: 72px;
+    border-color: #5cb85c;
+}
 /* Sidebar list-group-items */
 .list-group-item {
     cursor: pointer;
