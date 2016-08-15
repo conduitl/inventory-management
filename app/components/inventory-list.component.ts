@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 
 import { ListLayoutComponent } from './list-layout.component';
+import { GridLayoutComponent } from './grid-layout.component';
 
 import { Plant } from '../model/plant';
 import { Category } from '../model/category';
@@ -12,7 +13,7 @@ import { PlantService } from '../services/plant.service';
 @Component({
     selector: 'inventory-list',
     templateUrl: 'html/inventory-list.component.html',
-    directives: [ROUTER_DIRECTIVES, ListLayoutComponent]
+    directives: [ROUTER_DIRECTIVES, ListLayoutComponent, GridLayoutComponent]
 })
 
 export class InventoryListComponent implements OnInit {

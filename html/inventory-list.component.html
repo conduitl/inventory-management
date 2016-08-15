@@ -34,16 +34,7 @@
             </div>
             <!-- Grid View -->
             <div *ngIf="layout === 'grid' ">
-                <div *ngIf="plant.image" (click)="gotoDetail(plant)" class="grid-tile">
-                    <div class="panel panel-success">
-                        <div class="panel-body">
-                            <img src="{{plant.image}}"/>
-                        </div>
-                        <div class="panel-footer">
-                            {{ plant.name | slice:0:1 | uppercase }}{{ plant.name | slice:1 }}
-                        </div>
-                    </div>
-                </div>
+                <grid-layout [plant]="plant"></grid-layout>
             </div>
         </div>
     </div>

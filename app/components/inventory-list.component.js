@@ -13,6 +13,7 @@ var router_1 = require('@angular/router');
 var router_2 = require('@angular/router');
 var router_3 = require('@angular/router');
 var list_layout_component_1 = require('./list-layout.component');
+var grid_layout_component_1 = require('./grid-layout.component');
 var category_1 = require('../model/category');
 var plant_service_1 = require('../services/plant.service');
 var InventoryListComponent = (function () {
@@ -63,7 +64,7 @@ var InventoryListComponent = (function () {
         core_1.Component({
             selector: 'inventory-list',
             templateUrl: 'html/inventory-list.component.html',
-            directives: [router_1.ROUTER_DIRECTIVES, list_layout_component_1.ListLayoutComponent]
+            directives: [router_1.ROUTER_DIRECTIVES, list_layout_component_1.ListLayoutComponent, grid_layout_component_1.GridLayoutComponent]
         }), 
         __metadata('design:paramtypes', [router_2.Router, router_3.ActivatedRoute, plant_service_1.PlantService])
     ], InventoryListComponent);
