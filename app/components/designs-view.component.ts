@@ -68,10 +68,8 @@ export class DesignsViewComponent implements OnInit {
         });
         console.log('Prev clicked');
         if (design.selected - 1 < 0 ) {
-            console.log('Go to end of array');
             design.selected = design.count - 1;
         } else {
-            console.log('Go one back ( idx > 0)');
             design.selected -= 1;
         }
     }
