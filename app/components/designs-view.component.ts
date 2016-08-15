@@ -13,7 +13,7 @@ export class DesignsViewComponent implements OnInit {
         private designService: DesignService
     ){}
     designs: Design[];
-    activePhotos: [{}]; // not yet in use... for cycling through photos
+    activePhotos: [State]; // not yet in use... for cycling through photos
 
     ngOnInit() {
         this.getDesigns();
@@ -25,15 +25,53 @@ export class DesignsViewComponent implements OnInit {
                 this.activePhotos = this.initializePhotos(designs);
             });
     }
-    initializePhotos(designs: Design[] ):[{}] {
-        let active: [{}];
+    initializePhotos(designs: Design[] ):[State] {
+        let active: [State];
+        console.log('Initializing Photos');
+        console.log('length' + designs.length);
         for (let i = 0; i < designs.length; i++ ) {
-            active.push({
-                design   : designs[i].name,
-                selected : 0,
-                count    : designs[i].photos.length 
-            });
+            console.log('initialization loop...' + i);
+            let obj = new State(
+                designs[i].name,
+                0,
+                designs[i].photos.length );
+            if ( i === 0 ) {
+                active = [obj];
+            } else {
+                active.push(obj);
+            }
         }
+        console.log( 'Active is: ');
+        console.log(active);
         return active;
+    }
+    findActive(design_name: string){
+        let selection: State = this.activePhotos.find( (elem: State) => {
+            return elem.design === design_name;
+        });
+        return selection.selected;
+    }
+
+    cycleNextImage(design_name: string){
+        let design: State = this.activePhotos.find( (elem: State) => {
+            return elem.design === design_name;
+        });
+        if (design.selected + 1 < design.count) {
+            design.selected+= 1;
+        } else {
+            design.selected = 0;
+        }
+        
+    }
+}
+
+class State {
+    design: string;
+    selected: number;
+    count: number;
+    constructor(design: string, selected: number, count: number) {
+        this.design = design;
+        this.selected = selected;
+        this.count = count;
     }
 }

@@ -8,6 +8,14 @@ img.pull-right {
     border-top-right-radius: 3px;
 }
 
+/* Design View */
+.design {
+    text-align: center;
+}
+.design button {
+    margin: 12px;
+}
+
 /* Sidebar list-group-items */
 .list-group-item {
     cursor: pointer;

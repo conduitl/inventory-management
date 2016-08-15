@@ -27,14 +27,38 @@ var DesignsViewComponent = (function () {
     };
     DesignsViewComponent.prototype.initializePhotos = function (designs) {
         var active;
+        console.log('Initializing Photos');
+        console.log('length' + designs.length);
         for (var i = 0; i < designs.length; i++) {
-            active.push({
-                design: designs[i].name,
-                selected: 0,
-                count: designs[i].photos.length
-            });
+            console.log('initialization loop...' + i);
+            var obj = new State(designs[i].name, 0, designs[i].photos.length);
+            if (i === 0) {
+                active = [obj];
+            }
+            else {
+                active.push(obj);
+            }
         }
+        console.log('Active is: ');
+        console.log(active);
         return active;
+    };
+    DesignsViewComponent.prototype.findActive = function (design_name) {
+        var selection = this.activePhotos.find(function (elem) {
+            return elem.design === design_name;
+        });
+        return selection.selected;
+    };
+    DesignsViewComponent.prototype.cycleNextImage = function (design_name) {
+        var design = this.activePhotos.find(function (elem) {
+            return elem.design === design_name;
+        });
+        if (design.selected + 1 < design.count) {
+            design.selected += 1;
+        }
+        else {
+            design.selected = 0;
+        }
     };
     DesignsViewComponent = __decorate([
         core_1.Component({
@@ -46,4 +70,12 @@ var DesignsViewComponent = (function () {
     return DesignsViewComponent;
 }());
 exports.DesignsViewComponent = DesignsViewComponent;
+var State = (function () {
+    function State(design, selected, count) {
+        this.design = design;
+        this.selected = selected;
+        this.count = count;
+    }
+    return State;
+}());
 //# sourceMappingURL=designs-view.component.js.map

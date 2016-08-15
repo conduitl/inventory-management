@@ -1,5 +1,9 @@
 <h1>Designs</h1>
-<div *ngFor="let design of designs">
+<div *ngFor="let design of designs" class="design">
     <h2>{{design.name}}</h2>
-    <img class="img-responsive" src="{{design.photos[0]}}" />
+    <img class="img-responsive" src="{{design.photos[ findActive(design.name) ]}}" />
+    <button class="btn btn-success"
+            (click)="cycleNextImage(design.name)">
+            Next
+    </button>
 </div>

@@ -13,7 +13,7 @@
 
  export const DESIGNS: Design[] = [
      { name: '202 N Hall', photos: ['img/nhall1.jpg', 'img/nhall2.jpg' ,'img/nhall3.jpg', 'img/nhall4.jpg', 'img/nhall5.jpg']},
-     { name: '1010 Majestic Oak', photos: ['']}
+     { name: '1010 Majestic Oak', photos: ['img/nhall1.jpg', 'img/nhall2.jpg' ,'img/nhall3.jpg', 'img/nhall4.jpg', 'img/nhall5.jpg']}
  ]
 
  export const SUPPLIERS: Supplier[] = [
@@ -69,5 +69,6 @@
         description: 'Jatropha curcas is a species of flowering plant in the spurge family, Euphorbiaceae, that is native to the American tropics, most likely Mexico and Central America. It is cultivated in tropical and subtropical regions around the world, becoming naturalized in some areas.'},
      { id: 22, name: 'gypsum', type: 'soil', image: 'img/gypsum.jpg', description: 'gypsum'},
      { id: 23, name: 'garden mix', type: 'soil', image: 'img/garden-mix.jpg', description: 'garden mix'},
-     { id: 24, name: 'pine mulch', type: 'soil', image: 'img/pine-mulch.jpg', description: 'pine mulch'}
+     { id: 24, name: 'pine mulch', type: 'soil', image: 'img/pine-mulch.jpg', description: 'pine mulch'},
+     { id: 25, name: 'bottle brush', type: 'shrubs', image: null, description: ''}
  ];
