@@ -61,7 +61,19 @@ export class DesignsViewComponent implements OnInit {
         } else {
             design.selected = 0;
         }
-        
+    }
+    cyclePrevImage(design_name: string) {
+        let design: State = this.activePhotos.find( (elem: State ) => {
+            return elem.design === design_name;
+        });
+        console.log('Prev clicked');
+        if (design.selected - 1 < 0 ) {
+            console.log('Go to end of array');
+            design.selected = design.count - 1;
+        } else {
+            console.log('Go one back ( idx > 0)');
+            design.selected -= 1;
+        }
     }
 }
 

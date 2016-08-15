@@ -60,6 +60,20 @@ var DesignsViewComponent = (function () {
             design.selected = 0;
         }
     };
+    DesignsViewComponent.prototype.cyclePrevImage = function (design_name) {
+        var design = this.activePhotos.find(function (elem) {
+            return elem.design === design_name;
+        });
+        console.log('Prev clicked');
+        if (design.selected - 1 < 0) {
+            console.log('Go to end of array');
+            design.selected = design.count - 1;
+        }
+        else {
+            console.log('Go one back ( idx > 0)');
+            design.selected -= 1;
+        }
+    };
     DesignsViewComponent = __decorate([
         core_1.Component({
             selector: 'designs-view',

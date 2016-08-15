@@ -11,9 +11,24 @@ img.pull-right {
 /* Design View */
 .design {
     text-align: center;
+    position: relative;
 }
-.design button {
-    margin: 12px;
+.design .btn-slide-next {
+    position: absolute;
+    top: 8%;
+    right: 0;
+    background: rgba(0,0,0,0.1);
+    height: 90%;
+}
+.design .btn-slide-prev {
+    position: absolute;
+    top: 8%;
+    left: 0;
+    background: rgba(0,0,0,0.1);
+    height: 90%;
+}
+.design .btn .glyphicon {
+    font-size: 40px;
 }
 
 /* Sidebar list-group-items */
