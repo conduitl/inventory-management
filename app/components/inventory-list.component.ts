@@ -33,9 +33,9 @@ export class InventoryListComponent implements OnInit {
     public displayedListElements: [number];
 
     ngOnInit() {
-        // this.sub = this.route.params.subscribe(params => {
-        //     this.layout = params['layout'];
-        // });
+        this.sub = this.route.params.subscribe(params => {
+            this.layout = params['layout'];
+        });
         this.getPlants();
     }
     // Retrieve data from PlantService

@@ -24,9 +24,10 @@ var InventoryListComponent = (function () {
         this.search = '';
     }
     InventoryListComponent.prototype.ngOnInit = function () {
-        // this.sub = this.route.params.subscribe(params => {
-        //     this.layout = params['layout'];
-        // });
+        var _this = this;
+        this.sub = this.route.params.subscribe(function (params) {
+            _this.layout = params['layout'];
+        });
         this.getPlants();
     };
     // Retrieve data from PlantService

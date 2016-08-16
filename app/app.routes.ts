@@ -5,30 +5,14 @@ import { DesignsViewComponent } from './components/designs-view.component';
 import { SupplierViewComponent } from './components/supplier-view.component';
 import { PlantDetailComponent } from './components/plant-detail.component';
 
-import { InventoryListComponent } from './components/inventory-list.component'
-import { ListLayoutComponent } from './components/list-layout.component';
-import { GridLayoutComponent } from './components/grid-layout.component';
-
 const routes: RouterConfig = [
     {
-        path: 'categories',
-        component: CategoryViewComponent,
-        children: [{
-            path: '',
-            component: InventoryListComponent,
-            children: [{
-                path: 'grid',
-                component: GridLayoutComponent
-            }, {
-                path: 'list',
-                component: ListLayoutComponent
-            }]
-        }]
+        path: 'categories/:layout',
+        component: CategoryViewComponent
     },
     {
         path: 'categories',
-        redirectTo: '/categories/list',
-        pathMatch: 'full'
+        redirectTo: '/categories/list'
     },
     {
         path: 'gallery',
