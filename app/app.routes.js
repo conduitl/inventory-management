@@ -5,14 +5,29 @@ var gallery_view_component_1 = require('./components/gallery-view.component');
 var designs_view_component_1 = require('./components/designs-view.component');
 var supplier_view_component_1 = require('./components/supplier-view.component');
 var plant_detail_component_1 = require('./components/plant-detail.component');
+var inventory_list_component_1 = require('./components/inventory-list.component');
+var list_layout_component_1 = require('./components/list-layout.component');
+var grid_layout_component_1 = require('./components/grid-layout.component');
 var routes = [
     {
-        path: 'categories/:layout',
-        component: category_view_component_1.CategoryViewComponent
+        path: 'categories',
+        component: category_view_component_1.CategoryViewComponent,
+        children: [{
+                path: '',
+                component: inventory_list_component_1.InventoryListComponent,
+                children: [{
+                        path: 'grid',
+                        component: grid_layout_component_1.GridLayoutComponent
+                    }, {
+                        path: 'list',
+                        component: list_layout_component_1.ListLayoutComponent
+                    }]
+            }]
     },
     {
         path: 'categories',
-        redirectTo: '/categories/list'
+        redirectTo: '/categories/list',
+        pathMatch: 'full'
     },
     {
         path: 'gallery',

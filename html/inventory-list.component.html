@@ -15,10 +15,10 @@
             </div>
             <div class="col-md-5">
                 <div class="btn-group pull-right" role="group">
-                    <a [routerLink]="['/categories', 'list']" routerLinkActive="active" class="btn btn-success">
+                    <a [routerLink]="['/list']" routerLinkActive="active" class="btn btn-success">
                         <span class="glyphicon glyphicon-list"></span>
                     </a>
-                    <a [routerLink]="['/categories', 'grid']" routerLinkActive="active" class="btn btn-success">
+                    <a [routerLink]="['/grid']" routerLinkActive="active" class="btn btn-success">
                         <span class="glyphicon glyphicon-th-large"></span>
                     </a>
                 </div>
@@ -28,14 +28,7 @@
     <!-- List Results -->
     <div *ngFor="let plant of plants">
         <div *ngIf="category.name === 'all' || category.name === plant.type">
-            <!-- List View -->
-            <div *ngIf="layout === 'list' ">
-                <list-layout [plant]="plant"></list-layout>
-            </div>
-            <!-- Grid View -->
-            <div *ngIf="layout === 'grid' ">
-                <grid-layout [plant]="plant"></grid-layout>
-            </div>
+            <router-outlet></router-outlet>
         </div>
     </div>
 </div>
