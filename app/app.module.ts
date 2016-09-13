@@ -11,10 +11,10 @@ import { routing } from './app.routing';
         BrowserModule,
         routing
     ],
-    delarations: [
+    declarations: [
         AppComponent
     ],
-    boostrap: [
+    bootstrap: [
         AppComponent
     ]
 })
