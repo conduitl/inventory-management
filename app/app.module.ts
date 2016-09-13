@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 /* App Root */
 import { AppComponent } from './components/app.component';
 
-import { routing } from './app.routing'; // files need name change
+import { routing } from './app.routing';
 
 @NgModule({
     imports: [ 
