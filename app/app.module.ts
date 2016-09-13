@@ -6,6 +6,11 @@ import { AppComponent } from './components/app.component';
 
 import { routing } from './app.routing';
 
+/* Components */
+import { InventoryListComponent } from './components/inventory-list.component';
+import { ListLayoutComponent } from './components/list-layout.component';
+import { GridLayoutComponent } from './components/grid-layout.component';
+
 /* Services */
 import { PlantService } from './services/plant.service';
 import { CategoryService } from './services/category.service';
@@ -18,13 +23,17 @@ import { SupplierService } from './services/supplier.service';
         routing
     ],
     declarations: [
-        AppComponent
+        AppComponent,
+        InventoryListComponent,
+        ListLayoutComponent,
+        GridLayoutComponent
     ],
     providers: [
         PlantService, 
         CategoryService, 
         DesignService, 
-        SupplierService],
+        SupplierService
+    ],
     bootstrap: [
         AppComponent
     ]

@@ -1,13 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
-import { InventoryListComponent } from './inventory-list.component';
 import { CategoryService } from '../services/category.service';
 import { Category } from '../model/category';
 
 @Component({
     selector: 'category-view',
-    templateUrl: 'html/category-view.component.html',
-    directives: [InventoryListComponent]
+    templateUrl: 'html/category-view.component.html'
 })
 export class CategoryViewComponent implements OnInit {
     constructor(
