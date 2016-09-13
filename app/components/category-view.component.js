@@ -9,7 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var inventory_list_component_1 = require('./inventory-list.component');
 var category_service_1 = require('../services/category.service');
 var CategoryViewComponent = (function () {
     function CategoryViewComponent(categoryService) {
@@ -32,8 +31,7 @@ var CategoryViewComponent = (function () {
     CategoryViewComponent = __decorate([
         core_1.Component({
             selector: 'category-view',
-            templateUrl: 'html/category-view.component.html',
-            directives: [inventory_list_component_1.InventoryListComponent]
+            templateUrl: 'html/category-view.component.html'
         }), 
         __metadata('design:paramtypes', [category_service_1.CategoryService])
     ], CategoryViewComponent);

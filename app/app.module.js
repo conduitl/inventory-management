@@ -13,6 +13,15 @@ var platform_browser_1 = require('@angular/platform-browser');
 /* App Root */
 var app_component_1 = require('./components/app.component');
 var app_routing_1 = require('./app.routing');
+/* Components */
+var inventory_list_component_1 = require('./components/inventory-list.component');
+var list_layout_component_1 = require('./components/list-layout.component');
+var grid_layout_component_1 = require('./components/grid-layout.component');
+/* Services */
+var plant_service_1 = require('./services/plant.service');
+var category_service_1 = require('./services/category.service');
+var design_service_1 = require('./services/design.service');
+var supplier_service_1 = require('./services/supplier.service');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -22,10 +31,19 @@ var AppModule = (function () {
                 platform_browser_1.BrowserModule,
                 app_routing_1.routing
             ],
-            delarations: [
-                app_component_1.AppComponent
+            declarations: [
+                app_component_1.AppComponent,
+                inventory_list_component_1.InventoryListComponent,
+                list_layout_component_1.ListLayoutComponent,
+                grid_layout_component_1.GridLayoutComponent
             ],
-            boostrap: [
+            providers: [
+                plant_service_1.PlantService,
+                category_service_1.CategoryService,
+                design_service_1.DesignService,
+                supplier_service_1.SupplierService
+            ],
+            bootstrap: [
                 app_component_1.AppComponent
             ]
         }), 

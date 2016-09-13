@@ -9,11 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var router_1 = require('@angular/router');
-var plant_service_1 = require('../services/plant.service');
-var category_service_1 = require('../services/category.service');
-var design_service_1 = require('../services/design.service');
-var supplier_service_1 = require('../services/supplier.service');
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'KJ Majestic Garden';
@@ -22,8 +17,6 @@ var AppComponent = (function () {
         core_1.Component({
             selector: 'my-app',
             templateUrl: 'html/app.component.html',
-            directives: [router_1.ROUTER_DIRECTIVES],
-            providers: [plant_service_1.PlantService, category_service_1.CategoryService, design_service_1.DesignService, supplier_service_1.SupplierService]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
