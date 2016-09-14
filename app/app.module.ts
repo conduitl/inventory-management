@@ -11,6 +11,14 @@ import { InventoryListComponent } from './components/inventory-list.component';
 import { ListLayoutComponent } from './components/list-layout.component';
 import { GridLayoutComponent } from './components/grid-layout.component';
 
+// accessed through routing
+import { CategoryViewComponent } from './components/category-view.component';
+import { GalleryViewComponent } from './components/gallery-view.component';
+import { DesignsViewComponent } from './components/designs-view.component';
+import { SupplierViewComponent } from './components/supplier-view.component';
+import { PlantDetailComponent } from './components/plant-detail.component';
+
+
 /* Services */
 import { PlantService } from './services/plant.service';
 import { CategoryService } from './services/category.service';
@@ -26,7 +34,12 @@ import { SupplierService } from './services/supplier.service';
         AppComponent,
         InventoryListComponent,
         ListLayoutComponent,
-        GridLayoutComponent
+        GridLayoutComponent,
+        CategoryViewComponent,
+        GalleryViewComponent,
+        DesignsViewComponent,
+        SupplierViewComponent,
+        PlantDetailComponent
     ],
     providers: [
         PlantService, 

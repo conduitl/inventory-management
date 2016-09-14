@@ -17,6 +17,12 @@ var app_routing_1 = require('./app.routing');
 var inventory_list_component_1 = require('./components/inventory-list.component');
 var list_layout_component_1 = require('./components/list-layout.component');
 var grid_layout_component_1 = require('./components/grid-layout.component');
+// accessed through routing
+var category_view_component_1 = require('./components/category-view.component');
+var gallery_view_component_1 = require('./components/gallery-view.component');
+var designs_view_component_1 = require('./components/designs-view.component');
+var supplier_view_component_1 = require('./components/supplier-view.component');
+var plant_detail_component_1 = require('./components/plant-detail.component');
 /* Services */
 var plant_service_1 = require('./services/plant.service');
 var category_service_1 = require('./services/category.service');
@@ -35,7 +41,12 @@ var AppModule = (function () {
                 app_component_1.AppComponent,
                 inventory_list_component_1.InventoryListComponent,
                 list_layout_component_1.ListLayoutComponent,
-                grid_layout_component_1.GridLayoutComponent
+                grid_layout_component_1.GridLayoutComponent,
+                category_view_component_1.CategoryViewComponent,
+                gallery_view_component_1.GalleryViewComponent,
+                designs_view_component_1.DesignsViewComponent,
+                supplier_view_component_1.SupplierViewComponent,
+                plant_detail_component_1.PlantDetailComponent
             ],
             providers: [
                 plant_service_1.PlantService,
