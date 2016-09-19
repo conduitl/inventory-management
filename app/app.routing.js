@@ -1,10 +1,10 @@
 "use strict";
 var router_1 = require('@angular/router');
-var category_view_component_1 = require('./components/category-view.component');
-var gallery_view_component_1 = require('./components/gallery-view.component');
 var designs_view_component_1 = require('./components/designs-view.component');
 var supplier_view_component_1 = require('./components/supplier-view.component');
-var plant_detail_component_1 = require('./components/plant-detail.component');
+// catalog module
+var category_view_component_1 = require('./catalog/category-view.component');
+var plant_detail_component_1 = require('./catalog/plant-detail.component');
 var appRoutes = [
     {
         path: 'categories/:layout',
@@ -13,10 +13,6 @@ var appRoutes = [
     {
         path: 'categories',
         redirectTo: '/categories/list'
-    },
-    {
-        path: 'gallery',
-        component: gallery_view_component_1.GalleryViewComponent
     },
     {
         path: 'designs',
@@ -28,7 +24,7 @@ var appRoutes = [
     },
     {
         path: '',
-        redirectTo: '/gallery',
+        redirectTo: '/categories',
         pathMatch: 'full'
     },
     {

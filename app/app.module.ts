@@ -3,21 +3,21 @@ import { BrowserModule } from '@angular/platform-browser';
 
 /* App Root */
 import { AppComponent } from './components/app.component';
-
 import { routing } from './app.routing';
 
 /* Components */
-import { InventoryListComponent } from './components/inventory-list.component';
 import { ListLayoutComponent } from './components/list-layout.component';
 import { GridLayoutComponent } from './components/grid-layout.component';
 
 // accessed through routing
-import { CategoryViewComponent } from './components/category-view.component';
-import { GalleryViewComponent } from './components/gallery-view.component';
 import { DesignsViewComponent } from './components/designs-view.component';
 import { SupplierViewComponent } from './components/supplier-view.component';
-import { PlantDetailComponent } from './components/plant-detail.component';
 
+
+// catalog module
+import { CategoryViewComponent } from './catalog/category-view.component';
+import { InventoryListComponent } from './catalog/inventory-list.component';
+import { PlantDetailComponent } from './catalog/plant-detail.component';
 
 /* Services */
 import { PlantService } from './services/plant.service';
@@ -36,7 +36,6 @@ import { SupplierService } from './services/supplier.service';
         ListLayoutComponent,
         GridLayoutComponent,
         CategoryViewComponent,
-        GalleryViewComponent,
         DesignsViewComponent,
         SupplierViewComponent,
         PlantDetailComponent

@@ -1,10 +1,11 @@
 import { Routes, RouterModule } from '@angular/router';
 
-import { CategoryViewComponent } from './components/category-view.component';
-import { GalleryViewComponent } from './components/gallery-view.component';
 import { DesignsViewComponent } from './components/designs-view.component';
 import { SupplierViewComponent } from './components/supplier-view.component';
-import { PlantDetailComponent } from './components/plant-detail.component';
+
+// catalog module
+import { CategoryViewComponent } from './catalog/category-view.component';
+import { PlantDetailComponent } from './catalog/plant-detail.component';
 
 const appRoutes: Routes = [
     {
@@ -16,10 +17,6 @@ const appRoutes: Routes = [
         redirectTo: '/categories/list'
     },
     {
-        path: 'gallery',
-        component: GalleryViewComponent
-    },
-    {
         path: 'designs',
         component: DesignsViewComponent
     },
@@ -29,7 +26,7 @@ const appRoutes: Routes = [
     },
     {
         path: '',
-        redirectTo: '/gallery',
+        redirectTo: '/categories',
         pathMatch: 'full'
     },
     {

@@ -1,8 +1,0 @@
-<h3>Most Popular</h3>
-<div>
-    <span *ngFor="let plant of plants">
-        <div *ngIf="plant.image" (click)="gotoDetail(plant)" class="gallery-tile">
-            <img src="{{plant.image}}"/>
-        </div>
-    </span>
-</div>
