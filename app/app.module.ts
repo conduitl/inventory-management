@@ -13,11 +13,8 @@ import { GridLayoutComponent } from './components/grid-layout.component';
 import { DesignsViewComponent } from './components/designs-view.component';
 import { SupplierViewComponent } from './components/supplier-view.component';
 
-
-// catalog module
-import { CategoryViewComponent } from './catalog/category-view.component';
-import { InventoryListComponent } from './catalog/inventory-list.component';
-import { PlantDetailComponent } from './catalog/plant-detail.component';
+/* Modules */
+import { CatalogModule } from './catalog/catalog.module';
 
 /* Services */
 import { PlantService } from './services/plant.service';
@@ -28,17 +25,15 @@ import { SupplierService } from './services/supplier.service';
 @NgModule({
     imports: [ 
         BrowserModule,
+        CatalogModule,
         routing
     ],
     declarations: [
         AppComponent,
-        InventoryListComponent,
         ListLayoutComponent,
         GridLayoutComponent,
-        CategoryViewComponent,
         DesignsViewComponent,
         SupplierViewComponent,
-        PlantDetailComponent
     ],
     providers: [
         PlantService, 

@@ -19,10 +19,8 @@ var grid_layout_component_1 = require('./components/grid-layout.component');
 // accessed through routing
 var designs_view_component_1 = require('./components/designs-view.component');
 var supplier_view_component_1 = require('./components/supplier-view.component');
-// catalog module
-var category_view_component_1 = require('./catalog/category-view.component');
-var inventory_list_component_1 = require('./catalog/inventory-list.component');
-var plant_detail_component_1 = require('./catalog/plant-detail.component');
+/* Modules */
+var catalog_module_1 = require('./catalog/catalog.module');
 /* Services */
 var plant_service_1 = require('./services/plant.service');
 var category_service_1 = require('./services/category.service');
@@ -35,17 +33,15 @@ var AppModule = (function () {
         core_1.NgModule({
             imports: [
                 platform_browser_1.BrowserModule,
+                catalog_module_1.CatalogModule,
                 app_routing_1.routing
             ],
             declarations: [
                 app_component_1.AppComponent,
-                inventory_list_component_1.InventoryListComponent,
                 list_layout_component_1.ListLayoutComponent,
                 grid_layout_component_1.GridLayoutComponent,
-                category_view_component_1.CategoryViewComponent,
                 designs_view_component_1.DesignsViewComponent,
                 supplier_view_component_1.SupplierViewComponent,
-                plant_detail_component_1.PlantDetailComponent
             ],
             providers: [
                 plant_service_1.PlantService,
